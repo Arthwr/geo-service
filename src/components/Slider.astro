@@ -10,13 +10,50 @@ https://www.embla-carousel.com/api/options/
 <div class="embla">
   <div class="embla__container">
     <div id="slide-1" class="embla__slide">
-      <img src={slide1.src} alt="Изображение инженерных работ по геодезии" />
+      <div class="relative slide-wrapper">
+        <img
+          src={slide1.src}
+          alt="Изображение инженерных работ по геодезии"
+          width="1088px"
+          height="725px"
+        />
+        <span class="slider-card">
+          <h2>Геодезия</h2>
+          <p>
+            Исследуем состояние ваших зданий и сооружений, создаём геоподоснову
+            и геодезическую разбивку, а также проводим экспертизы для вашей
+            уверенности
+          </p>
+        </span>
+      </div>
     </div>
     <div id="slide-2" class="embla__slide">
-      <img src={slide2.src} alt="Изображение инженерных работ по геологии" />
+      <div class="relative slide-wrapper">
+        <img src={slide2.src} alt="Изображение инженерных работ по геологии" />
+        <span class="slider-card">
+          <h2>Геология</h2>
+          <p>
+            Анализируем состояние геологической среды на предполагаемых
+            объектах, разрабатываем геологическую базу и проводим геодезическое
+            обоснование.
+          </p>
+        </span>
+      </div>
     </div>
     <div id="slide-3" class="embla__slide">
-      <img src={slide3.src} alt="Изображение работ по лазерному сканированию" />
+      <div class="relative slide-wrapper">
+        <img
+          src={slide3.src}
+          alt="Изображение инженерных работ по лазерному сканированию"
+        />
+        <span class="slider-card">
+          <h2>Лазерное сканирование</h2>
+          <p>
+            Проводим лазерное сканирование для подробного анализа объектов,
+            создаем точную геопривязку и обеспечиваем геодезическое обоснование.
+          </p>
+        </span>
+      </div>
     </div>
   </div>
   <div class="embla__dots"></div>
@@ -38,6 +75,7 @@ https://www.embla-carousel.com/api/options/
     justify-content: center;
     flex: 0 0 100%;
     min-width: 0;
+    max-width: 100%;
   }
   .embla__dots {
     z-index: 5;
@@ -66,6 +104,45 @@ https://www.embla-carousel.com/api/options/
   }
   .embla__dot--selected:after {
     background: linear-gradient(45deg, rgb(138, 180, 248), rgb(193, 168, 226));
+  }
+
+  .slide-wrapper {
+    border-radius: 16px;
+    width: 1088px;
+    height: 725px;
+  }
+
+  .slide-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    opacity: 95%;
+  }
+
+  .slider-card {
+    position: absolute;
+    width: 756px;
+    height: 170px;
+    bottom: 0;
+    left: 0;
+    border-radius: 16px 16px 0px 16px;
+    background: rgba(66, 117, 109, 0.55);
+  }
+
+  .slider-card h2 {
+    font-weight: 700;
+    font-size: 32px;
+    color: #fffdfd;
+    padding: 10px 0px 0px 37px;
+  }
+
+  .slider-card p {
+    font-weight: 300;
+    font-size: 24px;
+    color: #fffdfd;
+    padding: 0px 46px 9px 37px;
+    line-height: normal;
   }
 </style>
 
