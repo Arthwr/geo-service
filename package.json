@@ -12,6 +12,8 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.0.2",
     "astro": "^3.6.0",
+    "embla-carousel": "^8.0.0-rc14",
+    "embla-carousel-autoplay": "^8.0.0-rc14",
     "tailwindcss": "^3.3.5"
   }
 }

@@ -1,0 +1,56 @@
+---
+import slide1 from "../assets/geodesySlide.webp";
+import slide2 from "../assets/geologySlide.webp";
+import slide3 from "../assets/laserSlide.webp";
+---
+
+<div class="embla">
+  <div class="embla__container">
+    <div class="embla__slide">
+      <img src={slide1.src} alt="Изображение инженерных работ по геодезии" />
+    </div>
+    <div class="embla__slide">
+      <img src={slide2.src} alt="Изображение инженерных работ по геологии" />
+    </div>
+    <div class="embla__slide">
+      <img src={slide3.src} alt="" />
+    </div>
+  </div>
+</div>
+<div class="embla__dots"></div>
+
+<style>
+  .embla {
+    margin-top: 30px;
+    margin-bottom: 100px;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+</style>
+
+<script>
+  import EmblaCarousel from "embla-carousel";
+  import Autoplay from "embla-carousel-autoplay";
+
+  const emblaNode = document.querySelector(".embla") as HTMLElement;
+  const options = {
+    loop: true,
+    delay: 10000,
+    stopOnMouseEnter: true,
+    stopOnInteraction: false,
+  };
+  const dotsNode = document.querySelector(".embla__dots");
+  const emblaApi = EmblaCarousel(emblaNode, options, [Autoplay()]);
+
+  console.log(emblaApi.slideNodes()); // Access API
+</script>
