@@ -42,3 +42,33 @@
     </div>
   </div>
 </nav>
+
+<style>
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all 0.5s;
+  }
+  nav ul li a:hover {
+    color: #60fff9;
+  }
+
+  nav ul li a {
+    position: relative;
+  }
+  nav ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: #60fff9;
+    height: 1px;
+  }
+  nav ul li a:hover:after {
+    width: 100%;
+  }
+</style>

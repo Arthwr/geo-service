@@ -1,0 +1,47 @@
+---
+import ctaBannerImg from "../assets/ctaBanner.webp";
+---
+
+<section class="flex justify-center mb-[244px]">
+  <div>
+    <img
+      class="object-contain"
+      src={ctaBannerImg.src}
+      alt="Изображение геодезического оборудования"
+      width="316px"
+      height="477px"
+    />
+  </div>
+  <div class="ml-[55px]">
+    <article class="max-w-[695px]">
+      <p class="text-[32px]">
+        Мы предоставляем широкий спектр услуг в области геодезии и геологии.
+        Обладаем <a class="text-textHighlight" href=""
+          >государственной лицензией</a
+        > на изыскательскую и проектную деятельность, а так же все необходимые
+        разрешительные документы.
+      </p>
+      <div
+        class="cta-button inline-flex mt-[39px] border rounded-[9px] justify-center items-center bg-buttonBg"
+      >
+        <a
+          class="text-heroTextBg ripple text-[28px] font-semibold py-[10px] px-[17px] inline-block"
+          href="">Напишите нам</a
+        >
+      </div>
+    </article>
+  </div>
+  <span class="w-[3px] h-[370px] ml-[57px] mt-[15px] bg-mainBgColor"></span>
+</section>
+
+<style>
+  .cta-button:hover {
+    background: #379d99;
+    transition: all 0.5s;
+  }
+
+  p a:hover {
+    color: #1be0d5;
+    transition: all 0.5s;
+  }
+</style>

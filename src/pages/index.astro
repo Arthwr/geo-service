@@ -1,7 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
+import Background from "../components/Background.astro";
+import Slider from "../components/Slider.astro";
+import Layout from "../layouts/Layout.astro";
+import Cta from "../components/Cta.astro";
+import Service from "../components/Service.astro";
 ---
 
 <Layout>
-
+  <header class="relative">
+    <Nav />
+    <Background />
+    <Hero />
+    <Slider />
+  </header>
+  <main>
+    <Cta />
+    <Service/>
+  </main>
 </Layout>
