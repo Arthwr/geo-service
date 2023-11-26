@@ -2,7 +2,7 @@
 export interface Props {
   activeTextColor?: string;
   headings: string[];
-  contents: string[];
+  contents: any[];
 }
 const { headings, contents, activeTextColor } = Astro.props as Props;
 ---
@@ -39,11 +39,14 @@ const { headings, contents, activeTextColor } = Astro.props as Props;
   }
 
   .tabs-header li {
-    border: 1px solid #397774;
-    border-radius: 8px 8px 0px 0px;
+    font-weight: 400;
     padding: 10px 33px;
-    background: #397774;
     cursor: pointer;
+    color: #7d7d7d;
+  }
+
+  .tabs-header li:not(.active-tab):hover {
+    font-weight: 600 !important;
   }
 
   .tabs-wrapper {
@@ -71,13 +74,21 @@ const { headings, contents, activeTextColor } = Astro.props as Props;
 
     function setTab(index) {
       if (current_tab_index > -1) {
+        tab_headers[current_tab_index].classList.remove("active-tab");
         tab_headers[current_tab_index].style.fontWeight = 400;
-        tab_headers[current_tab_index].style.color = "#fff";
+        tab_headers[current_tab_index].style.color = "#7D7D7D";
+        tab_headers[current_tab_index].style.backgroundColor = "";
+        tab_headers[current_tab_index].style.border = "";
         tab_contents[current_tab_index].style.display = "none";
       }
+      tab_headers[index].classList.add("active-tab");
       tab_headers[index].style.fontWeight = 800;
       tab_headers[index].style.color = activeTextColor;
+      tab_headers[index].style.backgroundColor = "#397774";
+      tab_headers[index].style.border = "1px solid #397774";
+      tab_headers[index].style.borderRadius = "8px 8px 0px 0px";
       tab_contents[index].style.display = "flex";
+
       current_tab_index = index;
     }
 
