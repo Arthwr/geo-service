@@ -1,3 +1,25 @@
-<div>
-    Hello Geology
+---
+import geologyServiceImg from "../../assets/geologyServiceImg.webp";
+---
+
+<div class="flex justify-between mb-[150px] h-full">
+  <div class="max-w-[532px] max-h-[436px] overflow-hidden">
+    <img
+      class="object-cover h-[436px]"
+      src={geologyServiceImg.src}
+      width="532px"
+      height="436px"
+      alt="Изображение инженерно-изыскательных геологических работ"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  <p
+    class="max-w-[610px] text-mainTxtColor text-[32px] font-light text-left pr-[12px]leading-[55px]"
+  >
+    Инженерно-геологические изыскания – это исследования, направленные на
+    изучение геологических условий строительства. В процессе оцениваются рельеф,
+    сейсмотектоника, гидрогеология и геологическое строение местности. Эти
+    изыскания предоставляют необходимые данные для проектирования строительства.
+  </p>
 </div>
