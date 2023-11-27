@@ -1,10 +1,20 @@
 ---
+import Geodesy from "../components/tab-content/Geodesy.astro";
+import Laser from "../components/tab-content/Laser.astro";
+import Geology from "../components/tab-content/Geology.astro";
+
 export interface Props {
   activeTextColor?: string;
   headings: string[];
   contents: any[];
 }
 const { headings, contents, activeTextColor } = Astro.props as Props;
+
+const componentMap: { [key: string]: any } = {
+  geodesy: Geodesy,
+  laser: Laser,
+  geology: Geology,
+};
 ---
 
 <div class="tabs">
@@ -14,11 +24,16 @@ const { headings, contents, activeTextColor } = Astro.props as Props;
   <div class="tabs-wrapper">
     <ul class="tabs-content">
       {
-        contents.map((content) => (
-          <li class="tabs">
-            <article>{content}</article>
-          </li>
-        ))
+        contents.map((content) => {
+          const Component = componentMap[content];
+          return Component ? (
+            <li class="tabs">
+              <article>
+                <Component />
+              </article>
+            </li>
+          ) : null;
+        })
       }
     </ul>
   </div>
