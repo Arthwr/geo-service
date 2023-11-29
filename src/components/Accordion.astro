@@ -8,8 +8,10 @@ const { content } = Astro.props;
     class="accordion bg-inherit text-mainTxtColor cursor-pointer py-[18px] w-full text-left font-normal border-none outline-none transition duration-400"
     ><span class="acc-title">{title}</span></button
   >
-  <div class="font-normal text-[24px] panel py-[18px] overflow-hidden">
-    <p>
+  <div class="panel overflow-hidden">
+    <p
+      class="font-normal text-[24px] py-[18px] max-w-[1150px] text-mainBgColor"
+    >
       {content}
     </p>
   </div>
@@ -21,28 +23,28 @@ const { content } = Astro.props;
   for (let i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
       const isActive = this.classList.contains("active");
+      let panel = this.nextElementSibling;
 
       closeAllTabs();
 
       if (!isActive) {
         this.classList.toggle("active");
-        let panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
         } else {
-          panel.style.display = "block";
+          panel.style.maxHeight = panel.scrollHeight + "px";
         }
       }
     });
   }
 
   function closeAllTabs() {
-    let allTabs = document.getElementsByClassName("accordion");
+    let allAccordions = document.getElementsByClassName("accordion");
 
-    for (let i = 0; i < allTabs.length; i++) {
-      allTabs[i].classList.remove("active");
-      let panel = allTabs[i].nextElementSibling as HTMLElement;
-      panel.style.display = "none";
+    for (let i = 0; i < allAccordions.length; i++) {
+      let panel = allAccordions[i].nextElementSibling;
+      allAccordions[i].classList.remove("active");
+      (panel as HTMLElement).style.maxHeight = null;
     }
   }
 </script>
@@ -57,9 +59,9 @@ const { content } = Astro.props;
   }
 
   .panel {
-    display: none;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
   }
 
   .accordion {
