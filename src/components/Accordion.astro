@@ -1,0 +1,87 @@
+---
+const { title } = Astro.props;
+const { content } = Astro.props;
+---
+
+<div class="border-acc">
+  <button
+    class="accordion bg-inherit text-mainTxtColor cursor-pointer py-[18px] w-full text-left font-normal border-none outline-none transition duration-400"
+    ><span class="acc-title">{title}</span></button
+  >
+  <div class="font-normal text-[24px] panel py-[18px] overflow-hidden">
+    <p>
+      {content}
+    </p>
+  </div>
+</div>
+
+<script>
+  let acc = document.getElementsByClassName("accordion");
+
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      const isActive = this.classList.contains("active");
+
+      closeAllTabs();
+
+      if (!isActive) {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      }
+    });
+  }
+
+  function closeAllTabs() {
+    let allTabs = document.getElementsByClassName("accordion");
+
+    for (let i = 0; i < allTabs.length; i++) {
+      allTabs[i].classList.remove("active");
+      let panel = allTabs[i].nextElementSibling as HTMLElement;
+      panel.style.display = "none";
+    }
+  }
+</script>
+
+<style>
+  .border-acc {
+    border-top: 1px solid #397774;
+  }
+
+  .border-acc:last-child {
+    border-bottom: 1px solid #397774;
+  }
+
+  .panel {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .accordion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .acc-title {
+    max-width: 1000px;
+  }
+
+  .accordion:after {
+    content: "";
+    width: 45px;
+    height: 45px;
+    background-image: url(../assets/plusIcon.svg);
+    color: rgba(57, 119, 116, 1);
+  }
+
+  .active:after {
+    content: "";
+    background-image: url(../assets/minusIcon.svg);
+  }
+</style>
