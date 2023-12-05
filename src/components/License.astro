@@ -1,7 +1,15 @@
 ---
-import projectLicenseFull from "../assets/projectLicenseFull.webp";
+import projectLicenseFull1 from "../assets/projectLicenseFull1.webp";
+import projectLicenseFull2 from "../assets/projectLicenseFull2.webp";
+import projectLicenseFull3 from "../assets/projectLicenseFull3.webp";
+import projectLicenseFull4 from "../assets/projectLicenseFull4.webp";
+import projectLicenseFull5 from "../assets/projectLicenseFull5.webp";
+import projectLicenseFull6 from "../assets/projectLicenseFull6.webp";
+import projectLicenseFull7 from "../assets/projectLicenseFull7.webp";
+
 import projectLPreview from "../assets/projectLPreview.webp";
-import workLicenseFull from "../assets/workLicenseFull.webp";
+import workLicenseFull1 from "../assets/workLicenseFull1.webp";
+import workLicenseFull2 from "../assets/workLicenseFull2.webp";
 import workLPreview from "../assets/workLPreview.webp";
 ---
 
@@ -28,7 +36,7 @@ import workLPreview from "../assets/workLPreview.webp";
         <img
           class="border"
           src={projectLPreview.src}
-          data-original={projectLicenseFull.src}
+          data-original={`${projectLicenseFull1.src},${projectLicenseFull2.src}, ${projectLicenseFull3.src}, ${projectLicenseFull4.src}, ${projectLicenseFull5.src}, ${projectLicenseFull6.src}, ${projectLicenseFull7.src}`}
           alt="Проектная лицензия"
           width="284px"
           height="402px"
@@ -38,7 +46,7 @@ import workLPreview from "../assets/workLPreview.webp";
         <img
           class="border"
           src={workLPreview.src}
-          data-original={workLicenseFull.src}
+          data-original={`${workLicenseFull1.src}, ${workLicenseFull2.src}`}
           alt="Лицензия на изыскания"
           width="284px"
           height="402px"
@@ -49,8 +57,12 @@ import workLPreview from "../assets/workLPreview.webp";
     </div>
   </div>
   <div class="modal">
-    <img src={projectLicenseFull.src} alt="" class="full-img" />
+    <img src={projectLicenseFull1.src} alt="" class="full-img" />
     <p class="caption"></p>
+    <div class="modal-btns">
+      <button class="prev-btn"></button>
+      <button class="next-btn"></button>
+    </div>
   </div>
 </section>
 
@@ -97,6 +109,24 @@ import workLPreview from "../assets/workLPreview.webp";
     left: 50%;
     transform: translate(-50%, -5%);
   }
+
+  .prev-btn {
+    position: fixed;
+    bottom: 50%;
+    left: 25%;
+    width: 48px;
+    height: 48px;
+    background: url("../assets/prevBtn.webp");
+  }
+
+  .next-btn {
+    position: fixed;
+    bottom: 50%;
+    right: 25%;
+    width: 48px;
+    height: 48px;
+    background: url("../assets/nextBtn.webp");
+  }
 </style>
 
 <script>
@@ -104,17 +134,42 @@ import workLPreview from "../assets/workLPreview.webp";
   const previews = document.querySelectorAll(".gallery img");
   const original = document.querySelector(".full-img") as HTMLImageElement;
   const caption = document.querySelector(".caption") as HTMLElement;
+  const prevButton = document.querySelector(".prev-btn") as HTMLElement;
+  const nextButton = document.querySelector(".next-btn") as HTMLElement;
 
   previews.forEach((preview) => {
     preview.addEventListener("click", () => {
       modal.classList.add("open");
       original.classList.add("open");
 
-      // Dynamic change text and image
-      const originalSrc = preview.getAttribute("data-original");
-      const altText = (preview as HTMLImageElement).alt;
-      original.src = originalSrc;
-      caption.textContent = altText;
+      // Array of image sources from data-original
+      const originalSrcArray = preview.getAttribute("data-original").split(",");
+
+      // Initialize the current page index
+      let currentPageIndex = 0;
+
+      // Show current image
+      function showImage() {
+        original.src = originalSrcArray[currentPageIndex];
+        let altText = (preview as HTMLImageElement).alt;
+        caption.textContent = altText;
+      }
+
+      showImage();
+
+      prevButton.addEventListener("click", () => {
+        if (currentPageIndex > 0) {
+          currentPageIndex--;
+          showImage();
+        }
+      });
+
+      nextButton.addEventListener("click", () => {
+        if (currentPageIndex < originalSrcArray.length - 1) {
+          currentPageIndex++;
+          showImage();
+        }
+      });
     });
   });
 
