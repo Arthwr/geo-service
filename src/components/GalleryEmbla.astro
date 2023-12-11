@@ -10,7 +10,7 @@ import galleryImg8 from "../assets/galleryImg8.webp";
 import galleryImg9 from "../assets/galleryImg9.webp";
 ---
 
-<section class="mb-[200px]">
+<section class="mb-[258px]">
   <h3
     class="mb-[144px] text-[64px] font-normal text-titleGreenTxtColor text-center"
   >
@@ -20,31 +20,67 @@ import galleryImg9 from "../assets/galleryImg9.webp";
     <div class="embla__viewport">
       <div class="embla__container photo">
         <div class="embla__slide img-wrapper">
-          <img src={galleryImg1.src} alt="" />
+          <img
+            src={galleryImg1.src}
+            loading="lazy"
+            alt="Изображение геодезических или геологических работ на объекте"
+          />
         </div>
         <div class="embla__slide img-wrapper">
-          <img src={galleryImg2.src} alt="" />
+          <img
+            src={galleryImg2.src}
+            loading="lazy"
+            alt="Изображение геодезических или геологических работ на объекте"
+          />
         </div>
         <div class="embla__slide img-wrapper">
-          <img src={galleryImg3.src} alt="" />
+          <img
+            src={galleryImg3.src}
+            loading="lazy"
+            alt="Изображение геодезических или геологических работ на объекте"
+          />
         </div>
         <div class="embla__slide img-wrapper">
-          <img src={galleryImg4.src} alt="" />
+          <img
+            src={galleryImg4.src}
+            loading="lazy"
+            alt="Изображение геодезических или геологических работ на объекте"
+          />
         </div>
         <div class="embla__slide img-wrapper">
-          <img src={galleryImg5.src} alt="" />
+          <img
+            src={galleryImg5.src}
+            loading="lazy"
+            alt="Изображение геодезических или геологических работ на объекте"
+          />
         </div>
         <div class="embla__slide img-wrapper">
-          <img src={galleryImg6.src} alt="" />
+          <img
+            src={galleryImg6.src}
+            loading="lazy"
+            alt="Изображение геодезических или геологических работ на объекте"
+          />
         </div>
         <div class="embla__slide img-wrapper">
-          <img src={galleryImg7.src} alt="" />
+          <img
+            src={galleryImg7.src}
+            loading="lazy"
+            alt="Изображение геодезических или геологических работ на объекте"
+          />
         </div>
         <div class="embla__slide img-wrapper">
-          <img src={galleryImg8.src} alt="" />
+          <img
+            src={galleryImg8.src}
+            loading="lazy"
+            alt="Изображение геодезических или геологических работ на объекте"
+          />
         </div>
         <div class="embla__slide img-wrapper">
-          <img src={galleryImg9.src} alt="" />
+          <img
+            src={galleryImg9.src}
+            loading="lazy"
+            alt="Изображение геодезических или геологических работ на объекте"
+          />
         </div>
       </div>
     </div>
@@ -101,6 +137,11 @@ import galleryImg9 from "../assets/galleryImg9.webp";
     object-fit: cover;
     width: 100%;
     height: 100%;
+    transition: transform 0.5s;
+  }
+
+  .img-wrapper img:hover {
+    transform: scale(1.03);
   }
 
   .embla__buttons {
