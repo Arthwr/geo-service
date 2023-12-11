@@ -6,9 +6,13 @@ import tLogo4 from "../assets/tLogo4.webp";
 import tLogo5 from "../assets/tLogo5.webp";
 import tLogo6 from "../assets/tLogo6.webp";
 import tLogo7 from "../assets/tLogo7.webp";
+
+import testimon1 from "../assets/testimon1.webp";
+import testimon2 from "../assets/testimon2.webp";
+import testimon3 from "../assets/testimon3.webp";
 ---
 
-<section class="max-w-[1250px] mx-auto">
+<section class="max-w-[1250px] mx-auto mb-[160px]">
   <div class="flex flex-col justify-center">
     <h3 class="mb-[79px] text-[64px] font-normal text-titleGreenTxtColor">
       Нам доверяют
@@ -28,10 +32,54 @@ import tLogo7 from "../assets/tLogo7.webp";
     <img src={tLogo7.src} loading="lazy" alt="Логотип DCS компании" />
   </div>
   <h4 class="text-[40px] mb-[124px]">Рекомендательные письма:</h4>
-</section>
+  <div class="gallery">
+    <div
+      class="img-container flex gap-10 w-full h-full object-cover cursor-pointer"
+    >
+      <img
+        class="border"
+        src={testimon1.src}
+        data-original={testimon1.src}
+        alt="Рекомендательное письмо TOO Caspian Engineering and Research"
+        width="284px"
+        height="402px"
+        loading="lazy"
+        decoding="async"
+      />
+      <img
+        class="border"
+        src={testimon2.src}
+        data-original={testimon2.src}
+        alt="Рекомендательное письмо Института OPTIUM"
+        width="284px"
+        height="402px"
+        loading="lazy"
+        decoding="async"
+      />
+      <img
+        class="border"
+        src={testimon3.src}
+        data-original={testimon3.src}
+        alt="Рекомендательное письмо TOO САН-А"
+        width="284px"
+        height="402px"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </div>
 
-<style>
-  .logo-wrapper img {
-    object-fit: contain;
-  }
-</style>
+  <style>
+    .logo-wrapper img {
+      object-fit: contain;
+    }
+
+    .img-container img {
+      transition: transform 0.5s;
+    }
+
+    .img-container img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</section>
