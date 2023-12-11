@@ -81,6 +81,7 @@ import workLPreview from "../assets/workLPreview.webp";
     opacity: 0;
     pointer-events: none;
     transition: 0.25s ease-out;
+    z-index: 1000;
   }
 
   .modal.open {
@@ -173,10 +174,20 @@ import workLPreview from "../assets/workLPreview.webp";
     });
   });
 
+  function closeModal() {
+    modal.classList.remove("open");
+    original.classList.remove("open");
+  }
+
   modal.addEventListener("click", (e) => {
     if ((e.target as HTMLElement).classList.contains("modal")) {
-      modal.classList.remove("open");
-      original.classList.remove("open");
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeModal();
     }
   });
 </script>
