@@ -1,0 +1,142 @@
+---
+import phoneIcon from "../assets/tabler_phone.svg";
+import mailIcon from "../assets/email.svg";
+---
+
+<section class="max-w-[1440px] mx-auto mb-[150px]">
+  <div class="bg-contactBg">
+    <h3
+      class="py-[10px] pl-[117px] pr-[1036px] text-[64px] font-normal text-navTxtColor"
+    >
+      Контакты
+    </h3>
+  </div>
+  <div
+    class="bg-contactBodyBg pt-[66px] pl-[117px] pb-[69px] pr-[244px] flex justify-between"
+  >
+    <div
+      class="bg-contactFormBg border-titleGreenTxtColor rounded-lg border-[0.5px] max-w-[636px]"
+    >
+      <div class="pl-[45px] pt-[28px] pb-[27px] pr-[58px]">
+        <h4 class="text-[40px] font-light pb-[26px]">Обратная связь</h4>
+        <form class="flex flex-col items-baseline" action="">
+          <div class="form-group">
+            <label for="name">Имя <span>*</span> :</label>
+            <input id="name" name="name" required type="text" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон :</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[7-8]{1}[0-9]{9}"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Почта <span>*</span> :</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <label class="mb-[5px]" for="message">Сообщение :</label>
+          <textarea
+            class="w-[533px] h-[149px] mb-[20px]"
+            name="message"
+            id="message"
+            rows="4"></textarea>
+          <button
+            class="px-[30px] py-[15px] bg-contactSubmitButtonBg rounded-lg text-navText text-[20px] font-bold"
+            type="submit">Отправить заявку</button
+          >
+        </form>
+      </div>
+    </div>
+    <div class="flex flex-col">
+      <address class="flex flex-col gap-[75px] not-italic">
+        <div
+          id="address-wrapper"
+          class="flex py-[25px] pl-[22px] pr-[31px] items-center justify-between gap-[38px]"
+        >
+          <div class="flex gap-[19px]">
+            <img
+              src={phoneIcon.src}
+              alt="Изображение иконки мобильного телефона"
+              width="32px"
+              height="32px"
+              loading="lazy"
+            />
+            <span id="line-separator" class="w-[1px] h-[65px]"></span>
+          </div>
+          <div class="flex flex-col gap-[15px]">
+            <span>+7 (701) 222 22 15</span>
+            <span>+7 (701) 432 25 15</span>
+          </div>
+        </div>
+        <div
+          id="email-wrapper"
+          class="flex py-[30px] pl-[26px] pr-[100px] justify-between"
+        >
+          <img
+            src={mailIcon.src}
+            alt="Изображение иконки почтового адреса"
+            width="32px"
+            height="32px"
+            loading="lazy"
+          />
+          <span>me-09@list.ru</span>
+        </div>
+      </address>
+    </div>
+  </div>
+</section>
+
+<style>
+  label {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  input {
+    padding: 10px;
+    width: 268px;
+    height: 46px;
+    border: 1px solid #000;
+    border-radius: 8px;
+  }
+
+  .form-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 385px;
+    margin-bottom: 14px;
+  }
+
+  #message {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    resize: none;
+  }
+
+  .form-group span {
+    color: #ee5d5d;
+  }
+
+  #address-wrapper,
+  #email-wrapper {
+    border-radius: 8px;
+    border: 1px solid rgba(33, 109, 106, 0.95);
+    background: #fff;
+  }
+
+  address span {
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  #line-separator {
+    background: #b8abab;
+  }
+</style>
