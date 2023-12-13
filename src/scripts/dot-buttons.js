@@ -3,40 +3,43 @@ export const addDotBtnsAndClickHandlers = (
   dotsNode,
   onButtonClick
 ) => {
-  let dotNodes = []
+  let dotNodes = [];
 
   const addDotBtnsWithClickHandlers = () => {
     dotsNode.innerHTML = emblaApi
       .scrollSnapList()
-      .map(() => '<button class="embla__dot" type="button"></button>')
-      .join('')
+      .map(
+        () =>
+          '<button class="embla__dot" type="button" aria-label="Slider dot navigation"></button>'
+      )
+      .join("");
 
     const scrollTo = (index) => {
-      emblaApi.scrollTo(index)
-      if (onButtonClick) onButtonClick(emblaApi)
-    }
+      emblaApi.scrollTo(index);
+      if (onButtonClick) onButtonClick(emblaApi);
+    };
 
-    dotNodes = Array.from(dotsNode.querySelectorAll('.embla__dot'))
+    dotNodes = Array.from(dotsNode.querySelectorAll(".embla__dot"));
     dotNodes.forEach((dotNode, index) => {
-      dotNode.addEventListener('click', () => scrollTo(index), false)
-    })
-  }
+      dotNode.addEventListener("click", () => scrollTo(index), false);
+    });
+  };
 
   const toggleDotBtnsActive = () => {
-    const previous = emblaApi.previousScrollSnap()
-    const selected = emblaApi.selectedScrollSnap()
-    dotNodes[previous].classList.remove('embla__dot--selected')
-    dotNodes[selected].classList.add('embla__dot--selected')
-  }
+    const previous = emblaApi.previousScrollSnap();
+    const selected = emblaApi.selectedScrollSnap();
+    dotNodes[previous].classList.remove("embla__dot--selected");
+    dotNodes[selected].classList.add("embla__dot--selected");
+  };
 
   emblaApi
-    .on('init', addDotBtnsWithClickHandlers)
-    .on('reInit', addDotBtnsWithClickHandlers)
-    .on('init', toggleDotBtnsActive)
-    .on('reInit', toggleDotBtnsActive)
-    .on('select', toggleDotBtnsActive)
+    .on("init", addDotBtnsWithClickHandlers)
+    .on("reInit", addDotBtnsWithClickHandlers)
+    .on("init", toggleDotBtnsActive)
+    .on("reInit", toggleDotBtnsActive)
+    .on("select", toggleDotBtnsActive);
 
   return () => {
-    dotsNode.innerHTML = ''
-  }
-}
+    dotsNode.innerHTML = "";
+  };
+};

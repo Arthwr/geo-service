@@ -85,7 +85,7 @@ import galleryImg9 from "../assets/galleryImg9.webp";
       </div>
     </div>
     <div class="embla__buttons">
-      <button class="embla__prev">
+      <button class="embla__prev" aria-label="Previous button">
         <svg class="embla__button__svg" viewBox="0 0 532 532">
           <path
             fill="currentColor"
@@ -93,7 +93,7 @@ import galleryImg9 from "../assets/galleryImg9.webp";
           ></path>
         </svg>
       </button>
-      <button class="embla__next">
+      <button class="embla__next" aria-label="Next button">
         <svg class="embla__button__svg" viewBox="0 0 532 532">
           <path
             fill="currentColor"
@@ -186,6 +186,4 @@ import galleryImg9 from "../assets/galleryImg9.webp";
 
   prevButtonNode.addEventListener("click", () => emblaApi.scrollPrev(), false);
   nextButtonNode.addEventListener("click", () => emblaApi.scrollNext(), false);
-
-  console.log(emblaApi.slideNodes()); // Access API
 </script>
