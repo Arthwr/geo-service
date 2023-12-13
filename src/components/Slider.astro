@@ -52,6 +52,7 @@ https://www.embla-carousel.com/api/options/
           alt="Изображение инженерных работ по лазерному сканированию"
           width="1088px"
           height="725px"
+          loading="lazy"
         />
         <span class="slider-card">
           <h2>Лазерное сканирование</h2>
@@ -120,8 +121,6 @@ https://www.embla-carousel.com/api/options/
   }
 
   .slide-wrapper img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 16px;
     opacity: 95%;
@@ -161,14 +160,18 @@ https://www.embla-carousel.com/api/options/
   const emblaNode = document.querySelector(".embla") as HTMLElement;
   const options = {
     loop: true,
-    delay: 10000,
     stopOnMouseEnter: true,
     stopOnInteraction: false,
-    duration: 30,
+    duration: 60,
+  };
+  const autoplayOptions = {
+    delay: 10000,
   };
 
   const dotsNode = document.querySelector(".embla__dots");
-  const emblaApi = EmblaCarousel(emblaNode, options, [Autoplay()]);
+  const emblaApi = EmblaCarousel(emblaNode, options, [
+    Autoplay(autoplayOptions),
+  ]);
   const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(
     emblaApi,
     dotsNode
