@@ -13,7 +13,7 @@ import workLicenseFull2 from "../assets/workLicenseFull2.webp";
 import workLPreview from "../assets/workLPreview.webp";
 ---
 
-<section class="mb-[255px]">
+<section id="license" class="mb-[255px]">
   <div class="flex justify-center items-end">
     <div class="flex justify-center">
       <span class="mb-[10px] self-end w-[3px] h-[360px] bg-mainBgColor"></span>
@@ -153,6 +153,7 @@ import workLPreview from "../assets/workLPreview.webp";
       // Initialize the current page index
       let currentPageIndex = 0;
 
+      const letter = document.getElementsByClassName("letter");
       // Show current image
       function showImage() {
         original.src = originalSrcArray[currentPageIndex];
@@ -162,19 +163,28 @@ import workLPreview from "../assets/workLPreview.webp";
 
       showImage();
 
-      prevButton.addEventListener("click", () => {
-        if (currentPageIndex > 0) {
-          currentPageIndex--;
-          showImage();
-        }
-      });
+      const isLetterImage = preview.classList.contains("letter");
 
-      nextButton.addEventListener("click", () => {
-        if (currentPageIndex < originalSrcArray.length - 1) {
-          currentPageIndex++;
-          showImage();
-        }
-      });
+      if (!isLetterImage) {
+        prevButton.addEventListener("click", () => {
+          if (currentPageIndex > 0) {
+            currentPageIndex--;
+            showImage();
+          }
+        });
+
+        nextButton.addEventListener("click", () => {
+          if (currentPageIndex < originalSrcArray.length - 1) {
+            currentPageIndex++;
+            showImage();
+          }
+        });
+        prevButton.style.display = "block";
+        nextButton.style.display = "block";
+      } else {
+        prevButton.style.display = "none";
+        nextButton.style.display = "none";
+      }
     });
   });
 
