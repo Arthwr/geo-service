@@ -7,7 +7,7 @@ import slide3 from "../assets/laserSlide.webp";
 <!-- Embla Carousel API & npm package
 https://www.embla-carousel.com/api/options/
 -->
-<div class="embla">
+<div id="hero-slider" class="embla">
   <div class="embla__container">
     <div id="slide-1" class="embla__slide">
       <div class="relative slide-wrapper">
@@ -68,12 +68,14 @@ https://www.embla-carousel.com/api/options/
 </div>
 
 <style is:global>
+  #hero-slider {
+    z-index: 40;
+  }
   .embla {
     margin-top: 30px;
     margin-bottom: 162px;
     overflow: hidden;
     position: relative;
-    z-index: 3;
   }
   .embla__container {
     display: flex;

@@ -28,7 +28,7 @@ import aboutImg2 from "../assets/aboutImg2.webp";
           src={aboutImg.src}
           width="400px"
           height="500px"
-          class="absolute rounded-lg z-10 left-0 top-0 w-[400px] h-[500px] object-cover"
+          class="aboutImgOne absolute rounded-lg left-0 top-0 w-[400px] h-[500px] object-cover"
           alt="Изображение лазерных работ на морпорте Актау"
           loading="lazy"
           decoding="async"
@@ -46,3 +46,9 @@ import aboutImg2 from "../assets/aboutImg2.webp";
     </div>
   </div>
 </section>
+
+<style>
+  .aboutImgOne {
+    z-index: 4;
+  }
+</style>

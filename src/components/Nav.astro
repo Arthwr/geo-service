@@ -1,4 +1,4 @@
-<nav class="z-0">
+<nav id="navBar" class="fixed w-full top-0">
   <div class="flex w-full items-center h-[75px] bg-navBarBg">
     <div class="w-full"></div>
     <ul
@@ -80,10 +80,19 @@
     white-space: nowrap;
     border-bottom-width: 1px;
   }
+
+  #navBar {
+    z-index: 5;
+  }
+
+  #navBar div {
+    background-color:;
+  }
 </style>
 
 <script>
   const anchorLinks = document.querySelectorAll("a[href^='#']");
+
   anchorLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -98,4 +107,24 @@
       }
     });
   });
+
+  let scrollPos = 0;
+  function handleScroll() {
+    const navBar = document.getElementById("navBar");
+    const currentScrollPos = window.scrollY;
+    const scrollDirection = currentScrollPos > scrollPos ? "up" : "down";
+
+    if (scrollDirection == "up") {
+      navBar.style.transform = "translateY(-200px)";
+    } else {
+      navBar.style.transform = "translateY(0)";
+    }
+    scrollPos = currentScrollPos;
+    if (currentScrollPos < 400) {
+      navBar.style.zIndex = "1";
+    } else {
+      navBar.style.zIndex = "50";
+    }
+  }
+  window.addEventListener("scroll", handleScroll);
 </script>
