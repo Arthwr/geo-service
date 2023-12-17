@@ -1,14 +1,16 @@
 ---
 import laserServiceImg from "../../assets/laserServiceImg.webp";
-import laserServiceImg2 from "../../assets/laserServiceImg2.webp";
+import Accordion from "../Accordion.astro";
 ---
 
-<div class="flex lg:flex-row flex-col-reverse justify-evenly lg:justify-between mb-[50px] lg:mb-[150px]">
+<div
+  class="flex lg:flex-row flex-col-reverse justify-evenly lg:justify-between mb-[50px] lg:mb-[150px]"
+>
   <div class="lg:max-w-[563px] max-h-[637px] overflow-hidden">
     <img
       class="object-cover h-[637px] servicePic"
       src={laserServiceImg.src}
-      width="563px"
+      width="1164px"
       height="637px"
       alt="Изображение инженерно-изыскательных геологических работ"
       loading="lazy"
@@ -18,29 +20,55 @@ import laserServiceImg2 from "../../assets/laserServiceImg2.webp";
   <p
     class="lg:mb-0 lg:max-w-[590px] mb-[40px] text-mainTxtColor text-[28px] lg:text-[32px] font-light text-left pr-[22x] leading-[55px]"
   >
-    Если Вам необходима детальная 3D-модель объекта, Вам не обойтись без
+    Если Вам необходима детальная 3D- модель объекта, Вам не обойтись без
     технологии трехмерного лазерного сканирования. Лазерное сканирование –
     новейшая технология, позволяющая в разы уменьшить сроки полевых работ, при
-    этом значительно увеличив качество и детальность выполняемой съемки. При
-    этом стоимость работ, выполненных этой технологией вплотную приблизилась к
+    этом значительно увеличив качество и детальность выполняемой съемки.
+    Стоимость работ, выполненных этой технологией вплотную приблизилась к
     стоимости традиционных методов в геодезии.
   </p>
 </div>
+<div class="mb-[50px]">
+  <span class="text-mainTxtColor">Виды работ:</span>
+</div>
 <section class="mb-[260px]">
-  <img
-    src={laserServiceImg2.src}
-    class="object-cover"
-    alt="Изображение работ по лазерному сканированию местности"
-    loading="lazy"
-    decoding="async"
-    width="1210px"
-    height="900px"
+  <Accordion
+    title="Cъемка фасадов зданий с построением 3D - модели"
+    content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  />
+  <Accordion
+    title="Трехмерная съемка территории предприятий и внутреннего оборудования цехов"
+    content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  />
+  <Accordion
+    title="Точное определений объемов разработки карьеров, шахт, отсыпки отвалов"
+    content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  />
+  <Accordion
+    title="Топографическая съемка труднодоступных участков (например: автомагистралей с интенсивным движением, мостов, путепроводов, эстакад, транспортных развязок)"
+    content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  />
+  <Accordion
+    title="Мониторинг эрозионных процессов, предупреждение оползней"
+    content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  />
+  <Accordion
+    title="Сохранение электронной модели памятника архитектуры с целью дальнейшей реконструкции (реставрации)"
+    content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  />
+  <Accordion
+    title="Получение точных пространственных характеристик объектов"
+    content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  />
+  <Accordion
+    title="Наблюдение за деформацией зданий и сооружений."
+    content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   />
 </section>
 <span class="font-normal text-[28px] lg:text-[32px] leading-tight">
   Остались вопросы? <br />
   <a href="#contact" class="text-textHighlight">Напишите нам</a>
-  и мы проконсольтируем вас
+   и мы проконсольтируем вас
 </span>
 
 <style>

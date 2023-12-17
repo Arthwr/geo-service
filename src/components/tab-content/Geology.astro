@@ -4,12 +4,12 @@ import Accordion from "../Accordion.astro";
 ---
 
 <div class="flex justify-around lg:justify-between mb-[150px] h-full">
-  <div class="max-w-[532px] max-h-[436px] overflow-hidden">
+  <div class="max-w-[532px] overflow-hidden">
     <img
-      class="object-cover h-[436px] servicePic"
+      class="object-cover servicePic"
       src={geologyServiceImg.src}
       width="532px"
-      height="436px"
+      height="700px"
       alt="Изображение инженерно-изыскательных геологических работ"
       loading="lazy"
       decoding="async"
@@ -19,29 +19,47 @@ import Accordion from "../Accordion.astro";
     class="max-w-[450px] lg:max-w-[610px] text-mainTxtColor text-[28px] lg:text-[32px] font-light text-left pr-[12px]leading-[55px]"
   >
     Инженерно-геологические изыскания – это исследования, направленные на
-    изучение геологических условий строительства. В процессе оцениваются рельеф,
-    сейсмотектоника, гидрогеология и геологическое строение местности. Эти
-    изыскания предоставляют необходимые данные для проектирования строительства.
+    изучение геологических условий строительства. <br />
+    <br />
+     В процессе оцениваются рельеф, сейсмотектоника, гидрогеология и
+    геологическое строение местности. Эти изыскания предоставляют необходимые
+    данные для проектирования строительства.
   </p>
 </div>
-<div class="mb-[20px]">
+<div class="mb-[50px]">
   <span class="text-mainTxtColor">Виды работ:</span>
 </div>
 <section class="mb-[260px]">
+  <Accordion
+    title="Рекогносцировочное обследование территории строительства (осмотр места изыскательских работ, визуальная оценка рельефа, описание имеющихся естественных и искусственных обнажений, описание водопроявлений)"
+    content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  />
   <Accordion
     title="Проходка инженерно-геологических выработок"
     content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   />
   <Accordion
-    title="Полевые исследования грунтов"
+    title="Установление геологического разреза, условия залегания грунтов и подземных вод"
     content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   />
   <Accordion
-    title="Лаборотные исследования"
+    title="Отбор образцов грунта ненарушенной и нарушенной  структуры для определения их состава, состояния и свойств"
     content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   />
   <Accordion
-    title="Камеральная обработка и изучение"
+    title="Отбор проб подземных вод"
+    content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  />
+  <Accordion
+    title="Выполнение лабораторных испытаний"
+    content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  />
+  <Accordion
+    title="Камеральная обработка материалов инженерно-геологических изысканий"
+    content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  />
+  <Accordion
+    title="Составление технического отчета"
     content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   />
 </section>
