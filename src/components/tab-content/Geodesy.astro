@@ -3,10 +3,10 @@ import geodesyServiceImg from "../../assets/geodesyServiceImg.webp";
 import Accordion from "../Accordion.astro";
 ---
 
-<div class="flex justify-between mb-[150px]">
+<div class="flex justify-around lg:justify-between mb-[150px]">
   <div class="max-w-[500px] max-h-[433px] overflow-hidden">
     <img
-      class="object-cover"
+      class="object-cover servicePic"
       src={geodesyServiceImg.src}
       width="500px"
       height="433px"
@@ -16,7 +16,7 @@ import Accordion from "../Accordion.astro";
     />
   </div>
   <p
-    class="max-w-[650px] text-mainTxtColor text-[32px] font-light text-left pr-[81px] leading-[55px]"
+    class="max-w-[450px] lg:max-w-[650px] text-mainTxtColor text-[28px] lg:text-[32px] font-light text-left lg:pr-[81px] leading-[55px]"
   >
     Инженерно-геодезические изыскания проводятся для получения
     топографо-геодезических данных о местности, включая здания, сооружения,
@@ -72,8 +72,17 @@ import Accordion from "../Accordion.astro";
     content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   />
 </section>
-<span class="font-normal text-[32px] leading-tight">
+<span class="font-normal text-[28px] lg:text-[32px] leading-tight">
   Остались вопросы? <br />
   <a href="#contact" class="text-textHighlight">Напишите нам</a>
   и мы проконсольтируем вас
 </span>
+
+<style>
+  .servicePic {
+    @media screen and (max-width: 1200px) {
+      width: 300px;
+      height: auto;
+    }
+  }
+</style>

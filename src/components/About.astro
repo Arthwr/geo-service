@@ -3,15 +3,17 @@ import aboutImg from "../assets/aboutImg.webp";
 import aboutImg2 from "../assets/aboutImg2.webp";
 ---
 
-<section id="about" class="mb-[165px]">
+<section id="about" class="mb-[165px] lg:mx-0 mx-[40px]">
   <div class="flex justify-center">
     <div class="flex justify-center">
       <span class="w-[3px] h-[600px] bg-mainBgColor self-center"></span>
       <div class="flex flex-col ml-[38px]">
-        <h3 class="mb-[35px] text-[64px] font-normal text-titleGreenTxtColor">
+        <h3
+          class="mb-[35px] text-[56px] lg:text-[64px] font-normal text-titleGreenTxtColor"
+        >
           О нас
         </h3>
-        <p class="max-w-[619px] font-light text-[32px]">
+        <p class="max-w-[619px] font-light text-[28px] lg:text-[32px]">
           ТОО Мангистау Инжиниринг специализируется на геодезическом и
           геологическом сопровождении объектов любой сложности, включая дороги,
           здания, сооружения и инженерные сети.
@@ -23,7 +25,7 @@ import aboutImg2 from "../assets/aboutImg2.webp";
           эксплуатации.
         </p>
       </div>
-      <div class="ml-[107px] relative w-[544px] h-[887px]">
+      <div class="lg:ml-[107px] relative w-[444px] h-[887px]">
         <img
           src={aboutImg.src}
           width="400px"
@@ -37,7 +39,7 @@ import aboutImg2 from "../assets/aboutImg2.webp";
           src={aboutImg2.src}
           width="400px"
           height="500px"
-          class="absolute rounded-lg bottom-0 right-0 w-[400px] h-[500px] object-cover"
+          class="absolute rounded-lg bottom-40 lg:bottom-0 right-0 w-[400px] h-[500px] object-cover"
           alt="Изображение работ ТОО Мангистау Инжиниринг в сфере геодезии и геологии"
           loading="lazy"
           decoding="async"
@@ -50,5 +52,12 @@ import aboutImg2 from "../assets/aboutImg2.webp";
 <style>
   .aboutImgOne {
     z-index: 4;
+  }
+
+  #about div img {
+    @media screen and (max-width: 1200px) {
+      width: 300px;
+      height: 400px;
+    }
   }
 </style>

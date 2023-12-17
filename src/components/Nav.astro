@@ -1,8 +1,8 @@
-<nav id="navBar" class="fixed w-full top-0">
+<nav id="navBar" class="fixed top-0">
   <div class="flex w-full items-center h-[75px] bg-navBarBg">
-    <div class="w-full"></div>
+    <div class="hidden lg:block w-full"></div>
     <ul
-      class="flex w-full items-center justify-center gap-[33px] text-navTxtColor text-[22px] font-semibold whitespace-nowrap"
+      class="flex w-full items-center justify-center gap-[33px] text-navTxtColor lg:text-[22px] text-[18px] font-semibold whitespace-nowrap"
     >
       <li>
         <a href="#service">Услуги</a>
@@ -15,7 +15,8 @@
       <li><a href="#contact">Контакты</a></li>
     </ul>
     <div
-      class="flex w-full justify-end items-center text-navTxtColor text-[22px]"
+      id="nav-phone"
+      class="flex w-full justify-end items-center text-navTxtColor lg:text-[22px] text-[18px]"
     >
       <svg
         class="mr-[10px]"
@@ -81,12 +82,22 @@
     border-bottom-width: 1px;
   }
 
-  #navBar {
-    z-index: 5;
+  #nav-phone {
+    @media screen and (max-width: 1200px) {
+      max-width: fit-content;
+    }
   }
 
-  #navBar div {
-    background-color:;
+  #navBar {
+    z-index: 5;
+    width: 100%;
+  }
+
+  .nav-tel svg {
+    @media screen and (max-width: 1200px) {
+      width: 18px;
+      height: 18px;
+    }
   }
 </style>
 

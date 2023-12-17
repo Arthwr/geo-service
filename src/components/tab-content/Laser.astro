@@ -3,10 +3,10 @@ import laserServiceImg from "../../assets/laserServiceImg.webp";
 import laserServiceImg2 from "../../assets/laserServiceImg2.webp";
 ---
 
-<div class="flex justify-between mb-[150px]">
-  <div class="max-w-[563px] max-h-[637px] overflow-hidden">
+<div class="flex lg:flex-row flex-col-reverse justify-evenly lg:justify-between mb-[50px] lg:mb-[150px]">
+  <div class="lg:max-w-[563px] max-h-[637px] overflow-hidden">
     <img
-      class="object-cover h-[637px]"
+      class="object-cover h-[637px] servicePic"
       src={laserServiceImg.src}
       width="563px"
       height="637px"
@@ -16,7 +16,7 @@ import laserServiceImg2 from "../../assets/laserServiceImg2.webp";
     />
   </div>
   <p
-    class="max-w-[590px] text-mainTxtColor text-[32px] font-light text-left pr-[22x] leading-[55px]"
+    class="lg:mb-0 lg:max-w-[590px] mb-[40px] text-mainTxtColor text-[28px] lg:text-[32px] font-light text-left pr-[22x] leading-[55px]"
   >
     Если Вам необходима детальная 3D-модель объекта, Вам не обойтись без
     технологии трехмерного лазерного сканирования. Лазерное сканирование –
@@ -37,8 +37,17 @@ import laserServiceImg2 from "../../assets/laserServiceImg2.webp";
     height="900px"
   />
 </section>
-<span class="font-normal text-[32px] leading-tight">
+<span class="font-normal text-[28px] lg:text-[32px] leading-tight">
   Остались вопросы? <br />
   <a href="#contact" class="text-textHighlight">Напишите нам</a>
   и мы проконсольтируем вас
 </span>
+
+<style>
+  .servicePic {
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>

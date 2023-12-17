@@ -10,7 +10,7 @@ const { content } = Astro.props;
   >
   <div class="panel overflow-hidden">
     <p
-      class="font-normal text-[24px] py-[18px] max-w-[1150px] text-mainBgColor"
+      class="font-normal text-[22px] lg:text-[24px] py-[18px] max-w-[1150px] text-mainBgColor"
     >
       {content}
     </p>
@@ -72,6 +72,9 @@ const { content } = Astro.props;
 
   .acc-title {
     max-width: 1000px;
+    @media screen and (max-width: 1200px) {
+      max-width: 800px;
+    }
   }
 
   .accordion:after {

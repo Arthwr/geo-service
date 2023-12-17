@@ -87,6 +87,7 @@ https://www.embla-carousel.com/api/options/
     min-width: 0;
     max-width: 100%;
   }
+
   .embla__dots {
     z-index: 5;
     top: 0.2rem;
@@ -118,14 +119,15 @@ https://www.embla-carousel.com/api/options/
 
   .slide-wrapper {
     border-radius: 16px;
-    width: 1088px;
-    height: 725px;
   }
 
   .slide-wrapper img {
     object-fit: cover;
     border-radius: 16px;
     opacity: 95%;
+    @media screen and (max-width:1200px) {
+      width: 900px;
+    }
   }
 
   .slider-card {
