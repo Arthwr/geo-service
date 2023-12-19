@@ -4,10 +4,10 @@ const { content } = Astro.props;
 ---
 
 <div class="border-acc">
-  <button
-    class="accordion bg-inherit text-mainTxtColor cursor-pointer py-[18px] w-full text-left font-normal border-none outline-none transition duration-400"
-    ><p class="acc-title">{title}</p></button
-  >
+  <div
+    class="accordion bg-inherit text-mainTxtColor py-[18px] w-full text-left font-normal border-none outline-none transition duration-400">
+    <p class="acc-title">{title}</p>
+  </div>
   <div class="panel overflow-hidden">
     <p
       class="font-normal text-[22px] lg:text-[24px] py-[18px] max-w-[1150px] text-mainBgColor"
@@ -16,38 +16,6 @@ const { content } = Astro.props;
     </p>
   </div>
 </div>
-
-<script>
-  let acc = document.getElementsByClassName("accordion");
-
-  for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      const isActive = this.classList.contains("active");
-      let panel = this.nextElementSibling;
-
-      closeAllTabs();
-
-      if (!isActive) {
-        this.classList.toggle("active");
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      }
-    });
-  }
-
-  function closeAllTabs() {
-    let allAccordions = document.getElementsByClassName("accordion");
-
-    for (let i = 0; i < allAccordions.length; i++) {
-      let panel = allAccordions[i].nextElementSibling;
-      allAccordions[i].classList.remove("active");
-      (panel as HTMLElement).style.maxHeight = null;
-    }
-  }
-</script>
 
 <style>
   .border-acc {
@@ -75,18 +43,5 @@ const { content } = Astro.props;
     @media screen and (max-width: 1200px) {
       max-width: 800px;
     }
-  }
-
-  .accordion:after {
-    content: "";
-    width: 45px;
-    height: 45px;
-    background-image: url(../assets/plusIcon.svg);
-    color: rgba(57, 119, 116, 1);
-  }
-
-  .active:after {
-    content: "";
-    background-image: url(../assets/minusIcon.svg);
   }
 </style>
