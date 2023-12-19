@@ -6,19 +6,21 @@ import mailIcon from "../assets/email.svg";
 <section id="contact" class="max-w-[1440px] mx-auto mb-[150px]">
   <div class="bg-contactBg">
     <h3
-      class="py-[10px] ml-[85px] lg:ml-0 lg:pl-[117px] lg:pr-[1036px] text-[56px] lg:text-[64px] font-normal text-navTxtColor"
+      class="py-[10px] ml-[85px] lg:ml-0 lg:pl-[117px] lg:pr-[1036px] text-[40px] md:text-[56px] lg:text-[64px] font-normal text-navTxtColor"
     >
       Контакты
     </h3>
   </div>
   <div
-    class="bg-contactBodyBg pt-[66px] pl-[40px] lg:pl-[117px] pb-[69px] lg:pr-[244px] flex justify-between"
+    class="bg-contactBodyBg pt-[66px] pl-[40px] lg:pl-[117px] pb-[69px] lg:pr-[244px] flex justify-between flex-col md:flex-row gap-[40px] md:gap"
   >
     <div
       class="bg-contactFormBg border-titleGreenTxtColor rounded-lg border-[0.5px] max-w-[636px]"
     >
-      <div class="pl-[45px] pt-[28px] pb-[27px] pr-[45px] lg:pr-[58px]">
-        <h4 class="text-[40px] font-light pb-[26px]">Обратная связь</h4>
+      <div class="md:px-[45px] mx-[30px] pt-[28px] pb-[27px] lg:pr-[58px]">
+        <h4 class="text-[32px] md:text-[40px] font-light pb-[26px]">
+          Обратная связь
+        </h4>
         <form class="flex flex-col items-baseline" id="form" method="POST">
           <!-- Web3Forms settings -->
           <input
@@ -61,7 +63,7 @@ import mailIcon from "../assets/email.svg";
       </div>
     </div>
     <div class="flex flex-col">
-      <address class="flex flex-col gap-[75px] not-italic mr-[20px]">
+      <address class="flex md:flex-col gap-[75px] not-italic md:mr-[20px] w-fit md:w-auto">
         <div
           id="address-wrapper"
           class="flex py-[25px] pl-[22px] pr-[22px] lg:pr-[31px] items-center justify-between gap-[38px]"
@@ -83,7 +85,7 @@ import mailIcon from "../assets/email.svg";
         </div>
         <div
           id="email-wrapper"
-          class="flex py-[30px] pl-[26px] pr-[26px] lg:pr-[100px] justify-around lg:justify-between"
+          class="flex py-[30px] pl-[26px] pr-[26px] lg:pr-[100px] gap-[38px] items-center md:items-start md:gap-0 justify-around lg:justify-between"
         >
           <img
             src={mailIcon.src}

@@ -3,17 +3,19 @@ import aboutImg2 from "../assets/aboutImg.webp";
 import aboutImg from "../assets/aboutImg2.webp";
 ---
 
-<section id="about" class="mb-[165px] lg:mx-0 mx-[40px]">
+<section id="about" class="mb-[165px] mx-[40px] lg:mx-0">
   <div class="flex justify-center">
     <div class="flex justify-center">
       <span class="w-[3px] h-[600px] bg-mainBgColor self-center"></span>
       <div class="flex flex-col ml-[38px]">
         <h3
-          class="mb-[35px] text-[56px] lg:text-[64px] font-normal text-titleGreenTxtColor"
+          class="mb-[35px] text-[40px] md:text-[56px] lg:text-[64px] font-normal text-titleGreenTxtColor"
         >
           О нас
         </h3>
-        <p class="max-w-[619px] font-light text-[28px] lg:text-[32px]">
+        <p
+          class="max-w-[619px] font-light text-[24px] md:text-[28px] lg:text-[32px]"
+        >
           ТОО «Мангистау Инжиниринг» специализируется на геодезическом и
           геологическом сопровождении объектов любой сложности, включая дороги,
           здания, сооружения и инженерные сети.
@@ -25,12 +27,14 @@ import aboutImg from "../assets/aboutImg2.webp";
           безопасного строительства и эксплуатации.
         </p>
       </div>
-      <div class="lg:ml-[107px] relative w-[444px] h-[887px]">
+      <div
+        class="lg:ml-[107px] relative w-[400px] md:w-[444px] h-[750px] md:h-[887px]"
+      >
         <img
           src={aboutImg.src}
           width="400px"
           height="500px"
-          class="aboutImgOne absolute rounded-lg left-0 top-0 w-[400px] h-[500px] object-cover"
+          class="aboutImgOne md:absolute rounded-lg left-0 top-20 md:top-0 w-[400px] h-[500px] object-cover mb-[40px] md:mb-0"
           alt="Изображение лазерных работ на морпорте Актау"
           loading="lazy"
           decoding="async"
@@ -39,7 +43,7 @@ import aboutImg from "../assets/aboutImg2.webp";
           src={aboutImg2.src}
           width="400px"
           height="500px"
-          class="absolute rounded-lg bottom-40 lg:bottom-0 right-0 w-[400px] h-[500px] object-cover"
+          class="md:absolute rounded-lg bottom-2 left-20 md:bottom-40 lg:bottom-0 md:right-0 w-[400px] h-[500px] object-cover"
           alt="Изображение работ ТОО Мангистау Инжиниринг в сфере геодезии и геологии"
           loading="lazy"
           decoding="async"
@@ -58,6 +62,11 @@ import aboutImg from "../assets/aboutImg2.webp";
     @media screen and (max-width: 1200px) {
       width: 300px;
       height: 400px;
+    }
+
+    @media screen and (max-width: 937px) {
+      width: 250px;
+      height: 350px;
     }
   }
 </style>
