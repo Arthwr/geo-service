@@ -2,19 +2,19 @@
 import ctaBannerImg from "../assets/ctaBanner.webp";
 ---
 
-<section class="flex justify-center items-center mb-[244px]">
-  <div>
+<section class="flex flex-col xxs:flex-row gap-[50px] xxs:gap-0 justify-center items-center mb-[140px] xxs:mb-[244px] mt-[244px]">
+  <div class="w-full h-full">
     <img
-      class="object-cover h-[300px] w-full sm:w-[316px] sm:h-[477px]"
+      class="object-contain self-start h-[350px] xxs:h-[300px] w-full sm:w-[316px] sm:h-[477px]"
       src={ctaBannerImg.src}
       alt="Изображение геодезического оборудования"
       width="316px"
       height="477px"
     />
   </div>
-  <div class="ml-[55px] mr-[40px]">
-    <article class="max-w-[300px] sm:max-w-[500px] lg:max-w-[695px]">
-      <p class="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px]">
+  <div class="xxs:ml-[55px] xxs:mr-[40px] mx-[40px]">
+    <article class="text-center xxs:text-left w-full xxs:max-w-[350px] sm:max-w-[500px] lg:max-w-[695px]">
+      <p class="text-[24px] md:text-[28px] lg:text-[32px]">
         Мы предоставляем широкий спектр услуг в области геодезии и геологии.
         Обладаем <a class="text-textHighlight" href="#license"
           >государственной лицензией</a

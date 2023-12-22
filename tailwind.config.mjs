@@ -3,7 +3,9 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     screens: {
-      sm: "740px",
+      xxs: '431px',
+      xs: '550px',
+      sm: "741px",
       md: "937px",
       lg: "1200px",
       xl: "1440px",

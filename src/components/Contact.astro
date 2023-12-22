@@ -3,25 +3,25 @@ import phoneIcon from "../assets/tabler_phone.svg";
 import mailIcon from "../assets/email.svg";
 ---
 
-<section id="contact" class="max-w-[1440px] mx-auto mb-[150px]">
+<section id="contact" class="max-w-[1440px] mx-auto lg:mb-[150px]">
   <div class="bg-contactBg">
     <h3
-      class="py-[10px] ml-[85px] lg:ml-0 lg:pl-[117px] lg:pr-[1036px] text-[40px] md:text-[56px] lg:text-[64px] font-normal text-navTxtColor"
+      class="py-[10px] ml-[20px] xxs:ml-[85px] lg:ml-0 lg:pl-[117px] lg:pr-[1036px] text-[40px] md:text-[56px] lg:text-[64px] font-normal text-navTxtColor"
     >
       Контакты
     </h3>
   </div>
   <div
-    class="bg-contactBodyBg pt-[66px] pl-[40px] lg:pl-[117px] pb-[69px] lg:pr-[244px] flex justify-between flex-col md:flex-row gap-[40px] md:gap"
+    class="bg-contactBodyBg xxs:pt-[66px] xxs:pl-[40px] lg:pl-[117px] pb-[69px] lg:pr-[244px] flex justify-between flex-col md:flex-row gap-[40px] md:gap"
   >
     <div
       class="bg-contactFormBg border-titleGreenTxtColor rounded-lg border-[0.5px] max-w-[636px]"
     >
-      <div class="md:px-[45px] mx-[30px] pt-[28px] pb-[27px] lg:pr-[58px]">
-        <h4 class="text-[32px] md:text-[40px] font-light pb-[26px]">
+      <div class="md:px-[45px] mx-[10px] xxs:mx-[30px] pt-[28px] pb-[27px] lg:pr-[58px]">
+        <h4 class="ml-[10px] xxs:ml-0 text-left text-[28px] xxs:text-[32px] md:text-[40px] font-light pb-[26px]">
           Обратная связь
         </h4>
-        <form class="flex flex-col items-baseline" id="form" method="POST">
+        <form class="flex flex-col items-center xxs:items-baseline xxs:mx-0 mx-[15px]" id="form" method="POST">
           <!-- Web3Forms settings -->
           <input
             type="hidden"
@@ -47,9 +47,9 @@ import mailIcon from "../assets/email.svg";
             <label for="email">Почта <span>*</span> :</label>
             <input type="email" id="email" name="email" required />
           </div>
-          <label class="mb-[5px]" for="message">Сообщение :</label>
+          <label class="mb-[5px] mx-auto xxs:mx" for="message">Сообщение :</label>
           <textarea
-            class="w-[533px] h-[149px] mb-[20px]"
+            class="w-full -0 sm:w-[533px] h-[149px] mb-[20px]"
             name="message"
             id="message"
             rows="4"></textarea>
@@ -62,8 +62,10 @@ import mailIcon from "../assets/email.svg";
         </form>
       </div>
     </div>
-    <div class="flex flex-col">
-      <address class="flex md:flex-col gap-[75px] not-italic md:mr-[20px] w-fit md:w-auto">
+    <div class="flex flex-col items-center xxs:items-start">
+      <address
+        class="flex flex-col sm:flex-row md:flex-col gap-[75px] not-italic md:mr-[20px] w-fit md:w-auto"
+      >
         <div
           id="address-wrapper"
           class="flex py-[25px] pl-[22px] pr-[22px] lg:pr-[31px] items-center justify-between gap-[38px]"
@@ -114,6 +116,9 @@ import mailIcon from "../assets/email.svg";
     height: 46px;
     border: 1px solid #000;
     border-radius: 8px;
+    @media screen and (max-width: 431px) {
+      width: 100%;
+    }
   }
 
   .form-group {
@@ -123,6 +128,10 @@ import mailIcon from "../assets/email.svg";
     justify-content: space-between;
     max-width: 385px;
     margin-bottom: 14px;
+
+    @media screen and (max-width: 431px) {
+     flex-direction: column;
+    }
   }
 
   #message {
@@ -157,6 +166,7 @@ import mailIcon from "../assets/email.svg";
       padding: 0;
     }
   }
+
 </style>
 
 <script src="https://web3forms.com/client/script.js" async defer></script>

@@ -176,6 +176,7 @@ import galleryImg15 from "../assets/galleryImg15.webp";
     display: flex;
     flex: 0 0 33.33%;
     padding-left: 0.5rem;
+    padding-right: 0.5rem;
     min-width: 0;
     max-width: 100%;
     touch-action: pan-y;
@@ -183,6 +184,10 @@ import galleryImg15 from "../assets/galleryImg15.webp";
 
     @media screen and (max-width: 1200px) {
       flex: 0 0 50%;
+    }
+    @media screen and (max-width: 741px) {
+      flex: 0 0 100%;
+      padding: 0px 20px 0px 20px;
     }
   }
 

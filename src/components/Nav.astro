@@ -100,6 +100,7 @@
   }
 
   #navBar {
+    transition: transform 0.3s ease;
     z-index: 5;
     width: 100%;
   }
@@ -261,11 +262,12 @@
   let scrollPos = 0;
   function handleScroll() {
     const navBar = document.getElementById("navBar");
+    const checkbox = document.getElementById("hamburger") as HTMLInputElement ;
     const currentScrollPos = window.scrollY;
     const scrollDirection = currentScrollPos > scrollPos ? "up" : "down";
 
     if (scrollDirection == "up") {
-      navBar.style.transform = "translateY(-200px)";
+      navBar.style.transform = "translateY(-100%)";
     } else {
       navBar.style.transform = "translateY(0)";
     }
@@ -275,6 +277,28 @@
     } else {
       navBar.style.zIndex = "50";
     }
+
+    if (scrollDirection == "down" && checkbox.checked) {
+      checkbox.checked = false;
+    }
   }
   window.addEventListener("scroll", handleScroll);
+
+  let isScrolling = false;
+
+  function debounce(func, delay) {
+    return function () {
+      if (!isScrolling) {
+        isScrolling = true;
+        func();
+        setTimeout(() => {
+          isScrolling = false;
+        }, delay);
+      }
+    };
+  }
+
+  window.addEventListener("scroll", () => {
+    debounce(handleScroll, 50)();
+  });
 </script>

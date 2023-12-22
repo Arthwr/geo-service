@@ -3,10 +3,10 @@ import geodesyServiceImg from "../../assets/geodesyServiceImg.webp";
 import Accordion from "../Accordion.astro";
 ---
 
-<div class="flex justify-around gap-[20px] md:gap-0 lg:justify-between mb-[150px]">
-  <div class="max-w-[500px] max-h-[433px] overflow-hidden">
+<div class="flex flex-col xxs:flex-row justify-around gap-[20px] md:gap-0 lg:justify-between mb-[100px] xxs:mb-[150px]">
+  <div class="w-full xxs:max-w-[500px] max-h-[433px] overflow-hidden">
     <img
-      class="object-cover servicePic"
+      class="object-cover servicePic overflow-hidden"
       src={geodesyServiceImg.src}
       width="500px"
       height="433px"
@@ -16,7 +16,7 @@ import Accordion from "../Accordion.astro";
     />
   </div>
   <p
-    class="max-w-[420px] md:max-w-[450px] lg:max-w-[650px] text-mainTxtColor text-[24px] md:text-[28px] lg:text-[32px] font-light text-left lg:pr-[81px] leading-[55px]"
+    class="max-w-[420px] md:max-w-[450px] lg:max-w-[650px] text-mainTxtColor text-[20px] xxs:text-[24px] md:text-[28px] lg:text-[32px] font-light text-left lg:pr-[81px] leading-[55px]"
   >
     Инженерно-геодезические изыскания проводятся для получения
     топографо-геодезических данных о местности, включая здания, сооружения,
@@ -71,6 +71,10 @@ import Accordion from "../Accordion.astro";
   .servicePic {
     @media screen and (max-width: 1200px) {
       width: 300px;
+      height: auto;
+    }
+    @media screen and (max-width: 431px) {
+      width: 100%;
       height: auto;
     }
   }

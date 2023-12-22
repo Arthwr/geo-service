@@ -5,30 +5,32 @@ import aboutImg from "../assets/aboutImg2.webp";
 
 <section id="about" class="mb-[165px] mx-[40px] lg:mx-0">
   <div class="flex justify-center">
-    <div class="flex justify-center">
-      <span class="w-[3px] h-[600px] bg-mainBgColor self-center"></span>
-      <div class="flex flex-col ml-[38px]">
-        <h3
-          class="mb-[35px] text-[40px] md:text-[56px] lg:text-[64px] font-normal text-titleGreenTxtColor"
-        >
-          О нас
-        </h3>
-        <p
-          class="max-w-[619px] font-light text-[24px] md:text-[28px] lg:text-[32px]"
-        >
-          ТОО «Мангистау Инжиниринг» специализируется на геодезическом и
-          геологическом сопровождении объектов любой сложности, включая дороги,
-          здания, сооружения и инженерные сети.
-          <br />
-          <br />
-           Все наши работы выполняются в соответствии с государственными
-          нормативами, правилами и стандартами. Гарантируя высокой уровень
-          изысканий, мы даем вам качественную основу для проектирования,
-          безопасного строительства и эксплуатации.
-        </p>
+    <div class="flex flex-col sm:flex-row justify-center">
+      <div class="flex justify-center mb-[100px] sm:mb-0">
+        <span class="hidden xxs:block w-[3px] h-[500px] sm:h-[600px] bg-mainBgColor self-center"></span>
+        <div class="flex flex-col  xxs:ml-[38px]">
+          <h3
+            class="text-center xxs:text-left mb-[50px] xxs:mb-[35px] text-[40px] md:text-[56px] lg:text-[64px] font-normal text-titleGreenTxtColor"
+          >
+            О нас
+          </h3>
+          <p
+            class="xxs:max-w-[619px] font-light text-[24px] md:text-[28px] lg:text-[32px]"
+          >
+            ТОО «Мангистау Инжиниринг» специализируется на геодезическом и
+            геологическом сопровождении объектов любой сложности, включая
+            дороги, здания, сооружения и инженерные сети.
+            <br />
+            <br />
+             Все наши работы выполняются в соответствии с государственными
+            нормативами, правилами и стандартами. Гарантируя высокой уровень
+            изысканий, мы даем вам качественную основу для проектирования,
+            безопасного строительства и эксплуатации.
+          </p>
+        </div>
       </div>
       <div
-        class="lg:ml-[107px] relative w-[400px] md:w-[444px] h-[750px] md:h-[887px]"
+        class="lg:ml-[107px] relative flex flex-col items-center xs:items-start xs:flex-row justify-center gap-[40px] sm:block w-full h-full sm:w-[400px] md:w-[444px] sm:h-[750px] md:h-[887px]"
       >
         <img
           src={aboutImg.src}
@@ -67,6 +69,16 @@ import aboutImg from "../assets/aboutImg2.webp";
     @media screen and (max-width: 937px) {
       width: 250px;
       height: 350px;
+    }
+
+    
+    @media screen and (max-width: 740px) {
+      width: 250px;
+      height: 400px;
+    }
+
+    @media screen and (max-width: 431px) {
+      width: 350px;
     }
   }
 </style>
