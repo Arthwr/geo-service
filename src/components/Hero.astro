@@ -2,51 +2,87 @@
 import logo from "../assets/logo.webp";
 ---
 
-<>
-  <div
-    class="flex gap-[10px] xxs:gap-0 justify-center items-center pt-[130px] xxs:pt-[180px]"
+<div
+  class="flex gap-[10px] xxs:gap-0 justify-center items-center pt-[130px] xxs:pt-[180px] homeHero-heading"
+>
+  <img
+    src={logo.src}
+    alt="Логотип компании ТОО Мангистау Инжиниринг"
+    width="93px"
+    height="67px"
+    class="hidden xxs:block w-[33px] xxs:w-[53px] h-full sm:w-[93px] sm:h-[67px]"
+  />
+  <h1
+    class="xxs:ml-[30px] text-[40px] sm:text-[40px] md:text-[56px] lg:text-[64px] text-center"
   >
-    <img
-      src={logo.src}
-      alt="Логотип компании ТОО Мангистау Инжиниринг"
-      width="93px"
-      height="67px"
-      class="hidden xxs:block w-[33px] xxs:w-[53px] h-full sm:w-[93px] sm:h-[67px]"
-    />
-    <h1
-      class="xxs:ml-[30px] text-[40px] sm:text-[40px] md:text-[56px] lg:text-[64px] text-center"
-    >
-      ТОО «Мангистау Инжиниринг»
-    </h1>
-  </div>
-  <div
-    class="max-w-[750px] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px] leading-[45px] font-light text-center mt-[25px] mx-auto"
+    ТОО «Мангистау Инжиниринг»
+  </h1>
+</div>
+<div
+  class="max-w-[750px] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px] leading-[45px] font-light text-center mt-[25px] mx-auto homeHero-description"
+>
+  Профессиональные работы в сфере <br /> инженерных изысканий
+</div>
+<div
+  class="flex items-center justify-center text-[16px] md:text-[24px] lg:text-[32px] mt-[40px] gap-[14px] font-light homeHero-span"
+>
+  <span>Геодезия</span>
+  <svg
+    width="7"
+    height="7"
+    viewBox="0 0 7 7"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
   >
-    Профессиональные работы в сфере <br /> инженерных изысканий
-  </div>
-  <div
-    class="flex items-center justify-center text-[16px] md:text-[24px] lg:text-[32px] mt-[40px] gap-[14px] font-light"
+    <circle id="Ellipse 2" cx="3.5" cy="3.5" r="3.5" fill="black"></circle>
+  </svg>
+  <span>Геология</span>
+  <svg
+    width="7"
+    height="7"
+    viewBox="0 0 7 7"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
   >
-    <span>Геодезия</span>
-    <svg
-      width="7"
-      height="7"
-      viewBox="0 0 7 7"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle id="Ellipse 2" cx="3.5" cy="3.5" r="3.5" fill="black"></circle>
-    </svg>
-    <span>Геология</span>
-    <svg
-      width="7"
-      height="7"
-      viewBox="0 0 7 7"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle id="Ellipse 2" cx="3.5" cy="3.5" r="3.5" fill="black"></circle>
-    </svg>
-    <span>Лазерное сканирование</span>
-  </div>
-</>
+    <circle id="Ellipse 2" cx="3.5" cy="3.5" r="3.5" fill="black"></circle>
+  </svg>
+  <span>Лазерное сканирование</span>
+</div>
+
+<style>
+  .homeHero-heading,
+  .homeHero-description,
+  .homeHero-span {
+    opacity: 0;
+    transform: translateY(15px);
+    transition:
+      opacity 0.75s ease-in-out,
+      transform 0.75s ease-in-out;
+    transition-delay: 0s;
+  }
+
+  .homeHero-description {
+    transition-delay: 0.25s;
+  }
+
+  .homeHero-span {
+    transition-delay: 0.5s;
+  }
+  .active.homeHero-heading,
+  .active.homeHero-description,
+  .active.homeHero-span {
+    opacity: 1;
+    transform: none;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(
+      ".homeHero-heading, .homeHero-description, .homeHero-span"
+    );
+    elements.forEach((element) => {
+      element.classList.add("active");
+    });
+  });
+</script>
