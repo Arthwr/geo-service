@@ -3,7 +3,9 @@ import geodesyServiceImg from "../../assets/geodesyServiceImg.webp";
 import Accordion from "../Accordion.astro";
 ---
 
-<div class="flex flex-col xxs:flex-row justify-around gap-[20px] md:gap-0 lg:justify-between mb-[100px] xxs:mb-[150px]">
+<div
+  class="geodesyGroup flex flex-col xxs:flex-row justify-around gap-[20px] md:gap-0 lg:justify-between mb-[100px] xxs:mb-[150px]"
+>
   <div class="w-full xxs:max-w-[500px] max-h-[433px] overflow-hidden">
     <img
       class="object-cover servicePic overflow-hidden"
@@ -59,12 +61,13 @@ import Accordion from "../Accordion.astro";
     title="Составление технического отчета"
     content="Lorem ipsum domenem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   />
-
 </section>
-<span class="font-normal text-[20px] md:text-[28px] lg:text-[32px] leading-tight">
+<span
+  class="font-normal text-[20px] md:text-[28px] lg:text-[32px] leading-tight"
+>
   Остались вопросы? <br />
   <a href="#contact" class="text-textHighlight">Напишите нам</a>
-  и мы проконсольтируем вас
+   и мы проконсольтируем вас
 </span>
 
 <style>
@@ -76,6 +79,12 @@ import Accordion from "../Accordion.astro";
     @media screen and (max-width: 431px) {
       width: 100%;
       height: auto;
+    }
+  }
+
+  @media screen and (max-width: 526px) {
+    .geodesyGroup {
+      flex-direction: column;
     }
   }
 </style>

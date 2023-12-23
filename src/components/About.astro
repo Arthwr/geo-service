@@ -15,7 +15,7 @@ import aboutImg from "../assets/aboutImg2.webp";
             О нас
           </h3>
           <p
-            class="xxs:max-w-[619px] font-light text-[24px] md:text-[28px] lg:text-[32px]"
+            class="aboutTxt xxs:max-w-[619px] font-light text-[24px] md:text-[28px] lg:text-[32px]"
           >
             ТОО «Мангистау Инжиниринг» специализируется на геодезическом и
             геологическом сопровождении объектов любой сложности, включая
@@ -58,6 +58,12 @@ import aboutImg from "../assets/aboutImg2.webp";
 <style>
   .aboutImgOne {
     z-index: 4;
+  }
+  
+  .aboutTxt {
+    @media screen and (max-width:321px) {
+      text-align: center;;
+    }
   }
 
   #about div img {

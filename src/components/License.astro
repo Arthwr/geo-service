@@ -18,14 +18,18 @@ import workLPreview from "../assets/workLPreview.webp";
     class="flex flex-col lg:flex-row justify-center items-center lg:items-end"
   >
     <div class="flex justify-center">
-      <span class="hidden xxs:block mb-[10px] self-end w-[3px] h-[360px] bg-mainBgColor"></span>
+      <span
+        class="hidden xxs:block mb-[10px] self-end w-[3px] h-[360px] bg-mainBgColor"
+      ></span>
       <div class="flex flex-col lg:ml-[38px] xxs:mx-[40px]">
         <h3
-          class="mb-[35px] text-[40px] md:text-[56px] lg:text-[64px] font-normal text-titleGreenTxtColor"
+          class="licenseHead mb-[35px] text-[40px] md:text-[56px] lg:text-[64px] font-normal text-titleGreenTxtColor"
         >
           Лицензия
         </h3>
-        <p class="w-full xxs:max-w-[800px] lg:max-w-[619px] font-light text-[24px] md:text-[28px] lg:text-[32px]">
+        <p
+          class="licenseTxt w-full xxs:max-w-[800px] lg:max-w-[619px] font-light text-[24px] md:text-[28px] lg:text-[32px]"
+        >
           Мы обладаем всеми необходимыми лицензиями для профессиональной работы
           в сферах геологии и геодезии, соответствуя при этом всем международным
           и казахстанским стандартам. Наши лицензии - ваша уверенность в
@@ -117,6 +121,10 @@ import workLPreview from "../assets/workLPreview.webp";
     bottom: 5%;
     left: 50%;
     transform: translate(-50%, -5%);
+
+    @media screen and (max-width: 321px) {
+      bottom: 0%;
+    }
   }
 
   .prev-btn {
@@ -135,6 +143,39 @@ import workLPreview from "../assets/workLPreview.webp";
     width: 48px;
     height: 48px;
     background: url("../assets/nextBtn.webp");
+  }
+
+  @media screen and (max-width: 769px) {
+    .prev-btn {
+      left: 15%;
+    }
+    .next-btn {
+      right: 15%;
+    }
+    .modal .caption {
+      font-size: 26px;
+    }
+  }
+
+  @media screen and (max-width: 426px) {
+    .prev-btn {
+      left: -3%;
+    }
+    .next-btn {
+      right: -3%;
+    }
+
+    .modal .caption {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 321px) {
+    .licenseTxt,
+    .licenseHead {
+      text-align: center;
+    }
   }
 </style>
 

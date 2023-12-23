@@ -17,11 +17,19 @@ import mailIcon from "../assets/email.svg";
     <div
       class="bg-contactFormBg border-titleGreenTxtColor rounded-lg border-[0.5px] max-w-[636px]"
     >
-      <div class="md:px-[45px] mx-[10px] xxs:mx-[30px] pt-[28px] pb-[27px] lg:pr-[58px]">
-        <h4 class="ml-[10px] xxs:ml-0 text-left text-[28px] xxs:text-[32px] md:text-[40px] font-light pb-[26px]">
+      <div
+        class="md:px-[45px] mx-[10px] xxs:mx-[30px] pt-[28px] pb-[27px] lg:pr-[58px]"
+      >
+        <h4
+          class="subcontact ml-[10px] xxs:ml-0 text-left text-[28px] xxs:text-[32px] md:text-[40px] font-light pb-[26px]"
+        >
           Обратная связь
         </h4>
-        <form class="flex flex-col items-center xxs:items-baseline xxs:mx-0 mx-[15px]" id="form" method="POST">
+        <form
+          class="flex flex-col items-center xxs:items-baseline xxs:mx-0 mx-[15px]"
+          id="form"
+          method="POST"
+        >
           <!-- Web3Forms settings -->
           <input
             type="hidden"
@@ -47,7 +55,9 @@ import mailIcon from "../assets/email.svg";
             <label for="email">Почта <span>*</span> :</label>
             <input type="email" id="email" name="email" required />
           </div>
-          <label class="mb-[5px] mx-auto xxs:mx" for="message">Сообщение :</label>
+          <label class="mb-[5px] mx-auto xxs:mx" for="message"
+            >Сообщение :</label
+          >
           <textarea
             class="w-full -0 sm:w-[533px] h-[149px] mb-[20px]"
             name="message"
@@ -130,7 +140,7 @@ import mailIcon from "../assets/email.svg";
     margin-bottom: 14px;
 
     @media screen and (max-width: 431px) {
-     flex-direction: column;
+      flex-direction: column;
     }
   }
 
@@ -163,10 +173,20 @@ import mailIcon from "../assets/email.svg";
 
   #contact h3 {
     @media screen and (max-width: 1200px) {
-      padding: 0;
+      padding: 0px;
+    }
+    @media screen and (max-width: 321px) {
+      text-align: center;
+      margin: 0px;
     }
   }
 
+  .subcontact {
+    @media screen and (max-width: 321px) {
+      text-align: center;
+      margin: 0px;
+    }
+  }
 </style>
 
 <script src="https://web3forms.com/client/script.js" async defer></script>
