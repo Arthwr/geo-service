@@ -22,7 +22,7 @@ import Accordion from "../Accordion.astro";
   >
     Инженерно-геологические изыскания – это исследования, направленные на
     изучение геологических условий строительства. <br />
-    <br class="hidden md:block"/>
+    <br class="hidden md:block" />
      В процессе оцениваются рельеф, сейсмотектоника, гидрогеология и
     геологическое строение местности. Эти изыскания предоставляют необходимые
     данные для проектирования строительства.
@@ -74,13 +74,9 @@ import Accordion from "../Accordion.astro";
 </span>
 
 <style>
-  .servicePic {
-    @media and (max-width: 1200px) {
+  @media and (max-width: 1200px) {
+    .servicePic {
       width: 400px;
-      height: auto;
-    }
-    @media and (max-width: 937px) {
-      width: 650px;
       height: auto;
     }
   }

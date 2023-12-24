@@ -88,15 +88,17 @@ import testimon3 from "../assets/testimon3.webp";
 
     .img-container img {
       transition: transform 0.5s;
-
-      @media (max-wdith: 1200px) {
-        width: 200px;
-        height: auto;
-      }
     }
 
     .img-container img:hover {
       transform: scale(1.1);
+    }
+
+    @media (max-wdith: 1200px) {
+      .img-container img {
+        width: 200px;
+        height: auto;
+      }
     }
   </style>
 </section>

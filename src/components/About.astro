@@ -7,8 +7,10 @@ import aboutImg from "../assets/aboutImg2.webp";
   <div class="flex justify-center">
     <div class="flex flex-col sm:flex-row justify-center">
       <div class="flex justify-center mb-[100px] sm:mb-0">
-        <span class="hidden xxs:block w-[3px] h-[500px] sm:h-[600px] bg-mainBgColor self-center"></span>
-        <div class="flex flex-col  xxs:ml-[38px]">
+        <span
+          class="hidden xxs:block w-[3px] h-[500px] sm:h-[600px] bg-mainBgColor self-center"
+        ></span>
+        <div class="flex flex-col xxs:ml-[38px]">
           <h3
             class="text-center xxs:text-left mb-[50px] xxs:mb-[35px] text-[40px] md:text-[56px] lg:text-[64px] font-normal text-titleGreenTxtColor"
           >
@@ -59,32 +61,33 @@ import aboutImg from "../assets/aboutImg2.webp";
   .aboutImgOne {
     z-index: 4;
   }
-  
-  .aboutTxt {
-    @media (max-width:321px) {
-      text-align: center;;
-    }
-  }
 
-  #about div img {
-    @media  (max-width: 1200px) {
+  @media (max-width: 1200px) {
+    #about div img {
       width: 300px;
       height: 400px;
     }
-
-    @media (max-width: 937px) {
+  }
+  @media (max-width: 937px) {
+    #about div img {
       width: 250px;
       height: 350px;
     }
-
-    
-    @media (max-width: 740px) {
+  }
+  @media (max-width: 740px) {
+    #about div img {
       width: 250px;
       height: 400px;
     }
-
-    @media (max-width: 431px) {
+  }
+  @media (max-width: 431px) {
+    #about div img {
       width: 350px;
+    }
+  }
+  @media (max-width: 321px) {
+    .aboutTxt {
+      text-align: center;
     }
   }
 </style>

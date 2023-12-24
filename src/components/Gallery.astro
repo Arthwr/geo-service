@@ -156,18 +156,12 @@ import galleryImg15 from "../assets/galleryImg15.webp";
 <style>
   .gallery {
   }
-
   .embla {
     overflow: hidden;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-
-    @media (max-width: 1200px) {
-      max-width: 950px;
-    }
   }
-
   .embla__container.photo {
     display: flex;
   }
@@ -181,25 +175,11 @@ import galleryImg15 from "../assets/galleryImg15.webp";
     max-width: 100%;
     touch-action: pan-y;
     position: relative;
-
-    @media (max-width: 1200px) {
-      flex: 0 0 50%;
-    }
-    @media (max-width: 741px) {
-      flex: 0 0 100%;
-      padding: 0px 20px 0px 20px;
-    }
-    @media (max-width: 400px) {
-      flex: 0 0 100%;
-      padding: 5px;
-    }
   }
-
   .img-wrapper {
     height: 600px;
     width: 400px;
   }
-
   .img-wrapper img {
     display: block;
     object-fit: cover;
@@ -236,6 +216,26 @@ import galleryImg15 from "../assets/galleryImg15.webp";
     width: 26px;
     height: 26px;
     color: #f7f7f7;
+  }
+  @media (max-width: 1200px) {
+    .embla {
+      max-width: 950px;
+    }
+    .embla__slide {
+      flex: 0 0 50%;
+    }
+  }
+  @media (max-width: 741px) {
+    .embla__slide {
+      flex: 0 0 100%;
+      padding: 0px 20px 0px 20px;
+    }
+  }
+  @media (max-width: 400px) {
+    .embla__slide {
+      flex: 0 0 100%;
+      padding: 5px;
+    }
   }
 </style>
 

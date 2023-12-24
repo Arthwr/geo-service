@@ -53,52 +53,11 @@ const componentMap: { [key: string]: any } = {
     color: rgba(255, 255, 255, 0.95);
   }
 
-  @media (max-width: 1200px) {
-    .tabs-header {
-      font-size: 28px;
-    }
-  }
-  @media (max-width: 937px) {
-    .tabs-header {
-      font-size: 26px;
-    }
-  }
-
-  @media (max-width: 526px) {
-    .tabs-header {
-      font-size: 22px;
-    }
-  }
-
-  @media (max-width: 431px) {
-    .tabs-header {
-      font-size: 20px;
-    }
-  }
-
   .tabs-header li {
     font-weight: 400;
     padding: 10px 33px;
     cursor: pointer;
     color: #7d7d7d;
-
-    @media (max-width: 937px) {
-      padding: 10px 20px;
-    }
-    @media (max-width: 741px) {
-      text-align: center;
-    }
-
-    @media (max-width: 526px) {
-      padding: 10px;
-    }
-    @media (max-width: 431px) {
-      padding: 10px;
-    }
-
-    @media (max-width: 352px) {
-      padding: 0px;
-    }
   }
 
   .tabs-header li:not(.active-tab):hover {
@@ -118,24 +77,64 @@ const componentMap: { [key: string]: any } = {
     border: 0.5px solid rgba(33, 109, 106, 0.95);
     font-weight: bold;
     background: #f4f4f4;
+  }
 
-    @media (max-width: 1200px) {
+  @media (max-width: 1200px) {
+    .tabs-header {
+      font-size: 28px;
+    }
+    .tabs-content {
       font-size: 26px;
     }
-
-    @media (max-width: 937px) {
+  }
+  @media (max-width: 937px) {
+    .tabs-header {
+      font-size: 26px;
+    }
+    .tabs-header li {
+      padding: 10px 20px;
+    }
+    .tabs-content {
       font-size: 22px;
       padding: 20px 20px;
     }
-    @media (max-width: 741px) {
+  }
+  @media (max-width: 741px) {
+    .tabs-content {
       font-size: 20px;
     }
+    .tabs-header li {
+      text-align: center;
+    }
+  }
 
-    @media (max-width: 431px) {
+  @media (max-width: 526px) {
+    .tabs-header {
+      font-size: 22px;
+    }
+    .tabs-header li {
       padding: 10px;
     }
+  }
 
-    @media (max-width: 321px) {
+  @media (max-width: 431px) {
+    .tabs-header {
+      font-size: 20px;
+    }
+    .tabs-header li {
+      padding: 10px;
+    }
+    .tabs-content {
+      padding: 10px;
+    }
+  }
+  @media (max-width: 352px) {
+    .tabs-header li {
+      padding: 0px;
+    }
+  }
+  @media (max-width: 321px) {
+    .tabs-content {
       font-size: 18px;
     }
   }

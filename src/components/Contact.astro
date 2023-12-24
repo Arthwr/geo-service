@@ -49,7 +49,7 @@ import mailIcon from "../assets/email.svg";
           </div>
           <div class="form-group">
             <label for="phone">Телефон :</label>
-            <input type="tel" id="phone" name="phone"  />
+            <input type="tel" id="phone" name="phone" />
           </div>
           <div class="form-group">
             <label for="email">Почта <span>*</span> :</label>
@@ -126,9 +126,6 @@ import mailIcon from "../assets/email.svg";
     height: 46px;
     border: 1px solid #000;
     border-radius: 8px;
-    @media (max-width: 431px) {
-      width: 100%;
-    }
   }
 
   .form-group {
@@ -138,10 +135,6 @@ import mailIcon from "../assets/email.svg";
     justify-content: space-between;
     max-width: 385px;
     margin-bottom: 14px;
-
-    @media (max-width: 431px) {
-      flex-direction: column;
-    }
   }
 
   #message {
@@ -171,18 +164,26 @@ import mailIcon from "../assets/email.svg";
     background: #b8abab;
   }
 
-  #contact h3 {
-    @media (max-width: 1200px) {
+  @media (max-width: 1200px) {
+    #contact h3 {
       padding: 0px;
-    }
-    @media (max-width: 321px) {
-      text-align: center;
-      margin: 0px;
     }
   }
 
-  .subcontact {
-    @media (max-width: 321px) {
+  @media (max-width: 431px) {
+    input {
+      width: 100%;
+    }
+    .form-group {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 321px) {
+    #contact h3 {
+      text-align: center;
+      margin: 0px;
+    }
+    .subcontact {
       text-align: center;
       margin: 0px;
     }
