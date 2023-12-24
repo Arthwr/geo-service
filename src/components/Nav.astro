@@ -18,7 +18,7 @@
     </ul>
     <div
       id="nav-phone"
-      class="flex w-full justify-end items-center text-navTxtColor lg:text-[22px] text-[20px] sm:text-[18px]"
+      class="flex w-full justify-end items-center text-navTxtColor lg:text-[22px] text-[18px] sm:text-[18px]"
     >
       <svg
         class="mr-[10px]"
@@ -242,12 +242,14 @@
 
 <script>
   const anchorLinks = document.querySelectorAll("a[href^='#']");
+  const checkbox = document.getElementById("hamburger") as HTMLInputElement;
 
   anchorLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const anchor = link.getAttribute("href").substring(1);
       const element = document.getElementById(anchor);
+      checkbox.checked = false;
 
       if (element) {
         element.scrollIntoView({
@@ -261,7 +263,6 @@
   let scrollPos = 0;
   function handleScroll() {
     const navBar = document.getElementById("navBar");
-    const checkbox = document.getElementById("hamburger") as HTMLInputElement;
     const currentScrollPos = window.scrollY;
     const scrollDirection = currentScrollPos > scrollPos ? "up" : "down";
 
