@@ -2,11 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Meta tags and seo -->
     <meta
       name="description"
       content="Профессиональные услуги в сфере инженерных изысканий"
     />
+    <meta property="og:title" content="ТОО Мангистау Инжиниринг" />
+    <meta
+      property="og:description"
+      content="Профессиональные услуги в сфере инженерных изысканий"
+    />
+    <meta property="og:image" content="../assets/logo.webp" />
+    <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width" />
+    <!-- Favicon -->
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -27,5 +37,14 @@
   </head>
   <body>
     <slot />
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "ТОО Мангистау Инжиниринг",
+        "url": "https://www.yourwebsite.com",
+        "logo": "URL_TO_YOUR_LOGO_IMAGE"
+      }
+    </script>
   </body>
 </html>
