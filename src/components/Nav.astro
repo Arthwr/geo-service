@@ -283,22 +283,4 @@
     }
   }
   window.addEventListener("scroll", handleScroll);
-
-  let isScrolling = false;
-
-  function debounce(func, delay) {
-    return function () {
-      if (!isScrolling) {
-        isScrolling = true;
-        func();
-        setTimeout(() => {
-          isScrolling = false;
-        }, delay);
-      }
-    };
-  }
-
-  window.addEventListener("scroll", () => {
-    debounce(handleScroll, 50)();
-  });
 </script>
