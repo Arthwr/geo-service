@@ -24,7 +24,7 @@ import logo from "../assets/logo.webp";
   Профессиональные работы в сфере <br /> инженерных изысканий
 </div>
 <div
-  class="flex items-center justify-center text-[16px] md:text-[24px] lg:text-[32px] mt-[40px] gap-[14px] font-light homeHero-span"
+  class="service-span flex items-center justify-center text-[16px] md:text-[24px] lg:text-[32px] mt-[40px] gap-[14px] font-light homeHero-span"
 >
   <span>Геодезия</span>
   <svg
@@ -86,3 +86,11 @@ import logo from "../assets/logo.webp";
     });
   });
 </script>
+
+<style>
+  @media (max-width: 400px) {
+    .service-span {
+      flex-direction: column  ;
+    }
+  }
+</style>
