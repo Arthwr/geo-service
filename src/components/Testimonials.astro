@@ -10,29 +10,40 @@ import tLogo7 from "../assets/tLogo7.webp";
 import testimon1 from "../assets/testimon1.webp";
 import testimon2 from "../assets/testimon2.webp";
 import testimon3 from "../assets/testimon3.webp";
-
 ---
 
 <section class="max-w-[1250px] mx-[10px] xxs:mx-[40px] mb-[160px] lg:mx-auto">
   <div class="flex flex-col justify-center">
-    <h3 class="text-center xxs:text-left mb-[79px] text-[40px] md:text-[56px] lg:text-[64px] font-normal text-titleGreenTxtColor ">
+    <h3
+      class="text-center xxs:text-left mb-[79px] text-[40px] md:text-[56px] lg:text-[64px] font-normal text-titleGreenTxtColor"
+    >
       Нам доверяют
     </h3>
-    <p class="max-w-[619px] font-light text-[24px] md:text-[28px] lg:text-[32px]  ">
+    <p
+      class="max-w-[619px] font-light text-[24px] md:text-[28px] lg:text-[32px]"
+    >
       Главная ценность, которой мы обладаем — это наша репутация и доверие наших
       клиентов.
     </p>
   </div>
-  <div class="flex flex-wrap justify-center md:justify-start gap-5 logo-wrapper mt-[70px] mb-[43px] lg:mx-[40px]">
+  <div
+    class="flex flex-wrap justify-center md:justify-start gap-5 logo-wrapper mt-[70px] mb-[43px] lg:mx-[40px]"
+  >
     <img src={tLogo1.src} loading="lazy" alt="Логотип DCS компании" />
     <img src={tLogo2.src} loading="lazy" alt="Логотип Ондасын строй компании" />
     <img src={tLogo3.src} loading="lazy" alt="Логотип JLL компании" />
     <img src={tLogo4.src} loading="lazy" alt="Логотип Royal Cars компании" />
-    <img src={tLogo5.src} loading="lazy" alt="Логотип Optimum Design Institute компании" />
+    <img
+      src={tLogo5.src}
+      loading="lazy"
+      alt="Логотип Optimum Design Institute компании"
+    />
     <img src={tLogo6.src} loading="lazy" alt="Логотип MGK компании" />
     <img src={tLogo7.src} loading="lazy" alt="Логотип WT Group компании" />
   </div>
-  <h4 class="text-[30px] xxs:text-[40px] mb-[124px] text-center md:text-left">Рекомендательные  письма:</h4>
+  <h4 class="text-[30px] xxs:text-[40px] mb-[124px] text-center md:text-left">
+    Рекомендательные письма:
+  </h4>
   <div class="gallery">
     <div
       class="img-container flex flex-wrap gap-10 w-full h-full object-cover cursor-pointer justify-around"
@@ -78,11 +89,10 @@ import testimon3 from "../assets/testimon3.webp";
     .img-container img {
       transition: transform 0.5s;
 
-      @media screen and (max-wdith:1200px) {
+      @media (max-wdith: 1200px) {
         width: 200px;
         height: auto;
       }
-
     }
 
     .img-container img:hover {
