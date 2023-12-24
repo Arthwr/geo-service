@@ -39,7 +39,7 @@ const componentMap: { [key: string]: any } = {
   </div>
 </div>
 
-<style is:global>
+<style>
   .tabs {
     margin-left: auto;
     margin-right: auto;
@@ -51,23 +51,27 @@ const componentMap: { [key: string]: any } = {
     font-size: 36px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.95);
+  }
 
-    @media (max-width: 1200px) {
+  @media (max-width: 1200px) {
+    .tabs-header {
       font-size: 28px;
     }
-    @media (max-width: 937px) {
+  }
+  @media (max-width: 937px) {
+    .tabs-header {
       font-size: 26px;
     }
+  }
 
-    @media (max-width: 526px) {
+  @media (max-width: 526px) {
+    .tabs-header {
       font-size: 22px;
     }
+  }
 
-    @media (max-width: 431px) {
-      font-size: 20px;
-    }
-
-    @media (max-width: 321px) {
+  @media (max-width: 431px) {
+    .tabs-header {
       font-size: 20px;
     }
   }
@@ -77,6 +81,7 @@ const componentMap: { [key: string]: any } = {
     padding: 10px 33px;
     cursor: pointer;
     color: #7d7d7d;
+
     @media (max-width: 937px) {
       padding: 10px 20px;
     }
