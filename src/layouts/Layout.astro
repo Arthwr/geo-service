@@ -18,10 +18,10 @@
     <!-- Favicon -->
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/geo-service/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/geo-service/favicon-16x16.png" />
-    <link rel="manifest" href="/geo-service/site.webmanifest" />
-    <link rel="mask-icon" href="/geo-service/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,6 +32,17 @@
       onload="this.onload=null;this.removeAttribute('media');"
       rel="stylesheet"
     />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KE04ND9R1M"></script>
+    <script>
+      // @ts-nocheck
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-KE04ND9R1M");
+    </script>
     <meta name="generator" content={Astro.generator} />
     <title>ТОО Мангистау Инжиниринг</title>
   </head>
@@ -42,7 +53,7 @@
         "@context": "http://schema.org",
         "@type": "Organization",
         "name": "ТОО Мангистау Инжиниринг",
-        "url": "https://www.geo-scan.kz",
+        "url": "https://www.geo-scan.kz"
       }
     </script>
   </body>

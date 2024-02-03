@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://arthwr.github.io",
-  base: "/geo-service",
+  site: "https://geo-scan.kz",
+  base: "/",
   integrations: [tailwind()],
 });
